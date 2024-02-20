@@ -8,53 +8,51 @@ using System.IO;
 public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
-    void GetDateTime()
+    [Serializable]
+    public class SaveData//classes pour stocker toutes les données du joueur
     {
-        Debug.Log(DateTime.Now<new DateTime(2024,12,19));
-        return;
+        public List<ZombieData> zombieList = new List<ZombieData>();
+        public List<ItemData> ItemList = new List<ItemData>();
     }
-    ZombieData Adolph= new ZombieData();
-    ZombieData Goebels= new ZombieData();
-    private void Awake()
+    [Serializable]
+    public class ZombieData//classe pour les données des zombies
+    {
+        public bool IsAway;
+        public long ExpectedReturn;
+    }
+    [Serializable]
+    public class ItemData//classe pour tout les données des items
+    {
+        public string Name;
+    }
+    public SaveData PlayerData = new SaveData();
+
+
+    private void Awake()//On charge l'instance du joueur et ses données
     {
         if (Instance == null)
             Instance = this;
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        LoadPlayerInfos();
     }
-    private void Start()
+
+    public void SavePlayerInfos()//on sauvegarde l'état des zombies et des items
     {
-        Adolph.ExpectedReturn = DateTime.Now;
-        LoadData();
-        SaveData();
-        Debug.Log(Adolph.ExpectedReturn < Goebels.ExpectedReturn);
-        Debug.Log((Application.persistentDataPath + "/SaveFile.json"));
-    }
-    public void SaveData()
-    {
-        ZombieData Data = MainManager.Instance.Adolph;
-        string json = JsonUtility.ToJson(Data);
+        string json = JsonUtility.ToJson(PlayerData);
         File.WriteAllText(Application.persistentDataPath + "/SaveFile.json", json);
     }
-    public void LoadData()
+    public void LoadPlayerInfos()
     {
         string json = File.ReadAllText(Application.persistentDataPath + "/SaveFile.json");
-        MainManager.Instance.Goebels = JsonUtility.FromJson<ZombieData>(json);
-        Debug.Log(Goebels.ExpectedReturn.ToString()+"sauvegarde");
+        Instance.PlayerData = JsonUtility.FromJson<SaveData>(json);
     }
-    [System.Serializable]
-    /*public class SaveData
+    void OnApplicationFocus(bool hasFocus)//on sauvegarde quand le joueur sort de l'application (sur mobile elle est jamais quittée, elle est pausée) et on charge quand il la lance
     {
-        public List<ZombieData> zombieList;
-        public List<ItemData> ItemList;
-    }*/
-    public class ZombieData
-    {
-        public DateTime ExpectedReturn;
-    }
-    public class ItemData
-    {
-        public string Name;
+        if (!hasFocus)
+            SavePlayerInfos();
+        else
+            LoadPlayerInfos();
     }
 }
