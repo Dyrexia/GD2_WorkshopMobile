@@ -11,6 +11,7 @@ public class Zombie_Send : MonoBehaviour
         if (MainManager.Instance.PlayerData.zombieList[zombieID].IsAway == false)
         {
             MainManager.Instance.PlayerData.zombieList[zombieID].ExpectedReturn = DateTime.Now.AddHours(hours).ToBinary();
+            MainManager.Instance.PlayerData.zombieList[zombieID].DepartureTime = DateTime.Now.ToBinary();
             MainManager.Instance.PlayerData.zombieList[zombieID].IsAway = true;
         }
     }

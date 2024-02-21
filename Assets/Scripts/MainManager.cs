@@ -19,11 +19,15 @@ public class MainManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
     }
-    void OnApplicationFocus(bool hasFocus)//on sauvegarde quand le joueur sort de l'application (sur mobile elle est jamais quittée, elle est pausée) et on charge quand il la lance
+    private void Start()
     {
-        if (!hasFocus)
-            SaveFunctions.SavePlayerInfos();
-        else
-            SaveFunctions.LoadPlayerInfos();
+        Debug.Log(DateTime.Now - DateTime.Now.AddHours(1));
     }
+    //void OnApplicationFocus(bool hasFocus)//on sauvegarde quand le joueur sort de l'application (sur mobile elle est jamais quittée, elle est pausée) et on charge quand il la lance
+    //{
+    //    if (!hasFocus)
+    //        SaveFunctions.SavePlayerInfos();
+    //    else
+    //        SaveFunctions.LoadPlayerInfos();
+    //}
 }

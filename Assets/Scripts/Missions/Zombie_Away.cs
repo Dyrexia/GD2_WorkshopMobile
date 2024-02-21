@@ -1,16 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Zombie_Away : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        GameObject.FindGameObjectWithTag("MissionStat").GetComponent<TextMeshProUGUI>().text= "Gnegnegne";//pour changer le texte d'un ui ATTENTION faut mettre le tag sur le texte directement
     }
-
-
     private float NumberOfZombies(float t,float MilStr,int infection=0, int power = 0)
     {
         return Mathf.Floor(Mathf.Sqrt(t) * infection - MilStr / power);

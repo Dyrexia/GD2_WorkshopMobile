@@ -12,7 +12,21 @@ public class SaveFunctions
     }
     public static void LoadPlayerInfos()
     {
-        string json = File.ReadAllText(Application.persistentDataPath + "/SaveFile.json");
-        MainManager.Instance.PlayerData = JsonUtility.FromJson<SaveData>(json);
+        if (File.Exists(Application.persistentDataPath + "/SaveFile.json"))
+        {
+            string json = File.ReadAllText(Application.persistentDataPath + "/SaveFile.json");
+            MainManager.Instance.PlayerData = JsonUtility.FromJson<SaveData>(json);
+        }
+        else
+        {
+            ResetPlayerData();//si le joueur n'a pas de sauvegarde, on lui en crée une
+        }
+    }
+    public static void ResetPlayerData()
+    {
+        MainManager.Instance.PlayerData.zombieList[0] = new ZombieData();
+        MainManager.Instance.PlayerData.MaxZombies = 1;
+        MainManager.Instance.PlayerData.InventorySize = 10;
+        SavePlayerInfos();
     }
 }

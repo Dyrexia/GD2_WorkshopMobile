@@ -33,7 +33,7 @@ public class ItemData//classe pour tout les données des items
             Intelligence = 0;
             Power = 0;
             Stealth = 0;
-            Durability = -1;//l'item de base a une DuraInfinie ATTENTION ne doit pas occuper d'espace dans l'inventaire
+            Durability = -1;//l'item de base a une DuraInfinie ATTENTION ne doit pas occuper d'espace dans l'inventaire -> quand on équippe qqch par dessus on le détruit, et quand on a plus rien on le crée
             FermentationModifier = 0;
             SizeInInventory = 0;
         }
