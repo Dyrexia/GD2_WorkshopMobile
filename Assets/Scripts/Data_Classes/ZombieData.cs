@@ -22,4 +22,12 @@ public class ZombieData//classe pour les données des zombies
         EquippedParts[4] = new ItemData("Jambe gauche");
         EquippedParts[5] = new ItemData("Jambe droite");
     }
+    public DateTime GetExpectedReturn()
+    {
+        return DateTime.FromBinary(ExpectedReturn);
+    }
+    public DateTime GetDepartureTime() 
+    {
+        return DateTime.FromBinary(DepartureTime);
+    }
 }

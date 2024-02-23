@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Zombie_Away : MonoBehaviour
 {
+    private ZombieData ActiveZombie;
     private void Start()
     {
         GameObject.FindGameObjectWithTag("MissionStat").GetComponent<TextMeshProUGUI>().text= "Gnegnegne";//pour changer le texte d'un ui ATTENTION faut mettre le tag sur le texte directement
@@ -23,6 +24,10 @@ public class Zombie_Away : MonoBehaviour
         }
         return 0f;
     }
+    private void SetActiveZombie(int zombieID)
+    {
+        ActiveZombie = MainManager.Instance.PlayerData.zombieList[zombieID];
+    }
     private void ShowZombieProgression()
     {
         StartCoroutine(UpdateZombieProgression(1));
@@ -33,20 +38,27 @@ public class Zombie_Away : MonoBehaviour
     }
     public IEnumerator UpdateZombieProgression(int zombieID)
     {
-        int t=0;
-        int MissionDuration=0;
-        int TimeOfArrival= 0;
-        bool HaveArrived=false;
-        while (t < MissionDuration)
+        double t = (ActiveZombie.GetExpectedReturn()-ActiveZombie.GetDepartureTime()).TotalSeconds;
+        if (t < 0f)
         {
-            t += 1;
-            if (t > TimeOfArrival)
-            {
-                HaveArrived = true;
-            }
-            Debug.Log("NZombies : " + NumberOfZombies(t, MilitaryStrength(t, HaveArrived)).ToString() + " Time : " + t.ToString());
+            //on fait revenir le zombie ici
         }
-        yield return new WaitForSeconds(1);
+        else
+        {
+            int MissionDuration = 0;
+            int TimeOfArrival = 0;
+            bool HaveArrived = false;
+            while (t < MissionDuration)
+            {
+                t += 1;
+                if (t > TimeOfArrival)
+                {
+                    HaveArrived = true;
+                }
+                //Debug.Log("NZombies : " + NumberOfZombies(t, MilitaryStrength(t, HaveArrived)).ToString() + " Time : " + t.ToString());
+                yield return new WaitForSeconds(1);
+            }
+        }
     }
     // Update is called once per frame
     void Update()
