@@ -9,7 +9,7 @@ public class ZombieData//classe pour les données des zombies
     public bool IsAway;
     public long ExpectedReturn;
     public long DepartureTime;
-    public ItemData[] EquippedParts;
+    public ItemData[] EquippedParts = new ItemData[6];
     public string Name;
     public ZombieData(string name = "John") //on initialise le zombie avec le stuff de base
     {
