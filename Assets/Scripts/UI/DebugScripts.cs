@@ -33,4 +33,8 @@ public class DebugScripts : MonoBehaviour
         Debug.Log("TotalPower = " + TotalPower);
         Debug.Log("TotalStealth = " + TotalStealth);
     }
+
+    private void Start()
+    {
+    }
 }
