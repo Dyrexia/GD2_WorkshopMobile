@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManagerEffect : MonoBehaviour
 {
     public List<AudioClip> audioclips;
     public AudioSource audiosource;
@@ -16,13 +16,13 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void playsound(int index) 
+    public void playsound(int index)
     {
         audiosource.clip = audioclips[index];
         audiosource.Play();
     }
-   
+
 
 }

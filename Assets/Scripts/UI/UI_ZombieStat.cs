@@ -25,13 +25,13 @@ public class UI_ZombieStat : MonoBehaviour
         int infection = 0;
         int intelligence = 0;
         int stealth = 0;
-        foreach (ItemData Item in zombie.EquippedParts)
+        foreach (var Item in zombie.EquippedParts)
         {
-            power += Item.Power;
-            level += Item.Level;
-            infection += Item.Infection;
-            intelligence += Item.Intelligence;
-            stealth += Item.Stealth;
+            power += Item.Value.Power;
+            level += Item.Value.Level;
+            infection += Item.Value.Infection;
+            intelligence += Item.Value.Intelligence;
+            stealth += Item.Value.Stealth;
         }
         return "Stats" +
             "\nBeauté : " + level +

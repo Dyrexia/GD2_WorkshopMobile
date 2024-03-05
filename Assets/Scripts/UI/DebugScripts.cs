@@ -10,7 +10,7 @@ public class DebugScripts : MonoBehaviour
     private int TotalIntelligence;
     private int TotalPower;
     private int TotalStealth;
-    public void newItem()
+    public void RandomStats()
     {
         TotalInfection=0; TotalIntelligence=0; TotalPower=0; TotalStealth=0;
         for(int i = 0; i<6;i++)
@@ -37,20 +37,20 @@ public class DebugScripts : MonoBehaviour
     {
         MainManager.Instance.PlayerData.ItemList.Add(new ItemData("Tête", Random.Range(1, 4)));
     }
-    public void InitCustomSave()
-    {
-        for (int k = 0; k < 3; k++)
-        {
-            if (MainManager.Instance.PlayerData.zombieList.Count >= k+1)
-                MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
-            else
-                MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
-            for (int i = 0; i < 6; i++)
-            {
-                MainManager.Instance.PlayerData.zombieList[k].EquippedParts[i] = new ItemData("Osef", k);
-            }
-        }
-    }
+    //public void InitCustomSave()
+    //{
+    //    for (int k = 0; k < 3; k++)
+    //    {
+    //        if (MainManager.Instance.PlayerData.zombieList.Count >= k+1)
+    //            MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
+    //        else
+    //            MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
+    //        for (int i = 0; i < 6; i++)
+    //        {
+    //            MainManager.Instance.PlayerData.zombieList[k].EquippedParts[i] = new ItemData("Osef", k);
+    //        }
+    //    }
+    //}
     public void DeleteSave()
     {
         SaveFunctions.ResetPlayerData();
