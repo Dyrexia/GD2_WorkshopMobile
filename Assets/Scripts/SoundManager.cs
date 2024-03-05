@@ -18,14 +18,10 @@ public class SoundManager : MonoBehaviour
     {
         
     }
-    public void playsound1() {
-    audiosource.clip = audioclips[0];
+    public void playsound(int index) {
+    audiosource.clip = audioclips[index];
         audiosource.Play();
     }
-    public void playsound2()
-    {
-        audiosource.clip = audioclips[1];
-        audiosource.Play();
-    }
+   
 
 }
