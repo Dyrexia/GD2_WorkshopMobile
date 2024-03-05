@@ -44,10 +44,6 @@ public class UI_ShowStat : MonoBehaviour
         Durabilite.text = Item.Durability.ToString();
         Pouvoir.text = Item.Power.ToString();
  }
-    public void CreateButton()
-    {
-
-        
-    }
-
+    
+    
 }
