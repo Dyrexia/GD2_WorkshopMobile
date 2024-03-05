@@ -9,6 +9,7 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
     public SaveData PlayerData = new SaveData();
+    public int CurrentZombie = 0;
 
 
     private void Awake()//On charge l'instance du joueur et ses données

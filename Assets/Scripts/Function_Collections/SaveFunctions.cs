@@ -25,7 +25,7 @@ public class SaveFunctions
     public static void ResetPlayerData()
     {
         MainManager.Instance.PlayerData.zombieList[0] = new ZombieData();
-        MainManager.Instance.PlayerData.MaxZombies = 1;
+        MainManager.Instance.PlayerData.MaxZombies = 3;
         MainManager.Instance.PlayerData.InventorySize = 10;
         SavePlayerInfos();
     }
