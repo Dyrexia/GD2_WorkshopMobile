@@ -19,6 +19,7 @@ public class MainManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        Debug.Log(Instance.PlayerData.zombieList.Count);
     }
     private void Start()
     {

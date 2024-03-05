@@ -33,6 +33,17 @@ public class DebugScripts : MonoBehaviour
         Debug.Log("TotalPower = " + TotalPower);
         Debug.Log("TotalStealth = " + TotalStealth);
     }
+    public void InitCustomSave()
+    {
+        for (int k = 0; k < 3; k++)
+        {
+            MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
+            for (int i = 0; i < 6; i++)
+            {
+                MainManager.Instance.PlayerData.zombieList[k].EquippedParts[i] = new ItemData("Osef", k);
+            }
+        }
+    }
 
     private void Start()
     {
