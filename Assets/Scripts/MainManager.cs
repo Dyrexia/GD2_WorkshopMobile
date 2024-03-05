@@ -22,6 +22,9 @@ public class MainManager : MonoBehaviour
     }
     private void Start()
     {
+        Debug.Log(Application.persistentDataPath + "/SaveFile.json");
+        //PlayerData.zombieList[0].EquippedPartsDict.Add("Tête", new ItemData("EZ"));
+        //Debug.Log(PlayerData.zombieList[0].EquippedParts["Tête"].Name);
         //Debug.Log((DateTime.Now - DateTime.Now.AddHours(1)).TotalSeconds);
     }
     void OnApplicationFocus(bool hasFocus)//on sauvegarde quand le joueur sort de l'application (sur mobile elle est jamais quittée, elle est pausée) et on charge quand il la lance
