@@ -7,16 +7,22 @@ using UnityEngine;
 public class SaveData//classes pour stocker toutes les données du joueur
 {
     public List<ZombieData> zombieList;
-    public List<ItemData> ItemList;
+    public SerializableDictionary<string, List<ItemData>> ItemLists;
     public List<BarrelData> BarrelList;
     public int InventorySize;
     public int MaxZombies;
     public SaveData() 
     {
         zombieList=new List<ZombieData>();
-        ItemList=new List<ItemData>();
-        BarrelList=new List<BarrelData>();
-        InventorySize=0;
-        MaxZombies=0;
+        ItemLists=new SerializableDictionary<string, List<ItemData>>();
+        ItemLists.Add("Tête",new List<ItemData>());
+        ItemLists.Add("Bras droit", new List<ItemData>());
+        ItemLists.Add("Bras gauche", new List<ItemData>());
+        ItemLists.Add("Torse", new List<ItemData>());
+        ItemLists.Add("Jambe gauche", new List<ItemData>());
+        ItemLists.Add("Jambe droite", new List<ItemData>());
+        BarrelList =new List<BarrelData>();
+        InventorySize=10;
+        MaxZombies=3;
     }
 }

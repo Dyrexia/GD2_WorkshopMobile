@@ -12,7 +12,7 @@ public class SerializableDictionary<TK,TV> : Dictionary<TK,TV> , ISerializationC
     public List<TK> _Keys = new List<TK>();
     public List<TV> _Values = new List<TV>();
 
-    public void OnBeforeSerialize()
+    public void OnBeforeSerialize()//pour "sauvegarder"
     {
         _Keys.Clear();
         _Values.Clear();
@@ -22,7 +22,7 @@ public class SerializableDictionary<TK,TV> : Dictionary<TK,TV> , ISerializationC
             _Values.Add(kvp.Value);
         }
     }
-    public void OnAfterDeserialize()
+    public void OnAfterDeserialize()//pour "charger"
     {
         //this = new Dictionary<TK, TV>();
         for(int i =0; i !=Math.Min(_Keys.Count, _Values.Count); i++)
@@ -30,10 +30,4 @@ public class SerializableDictionary<TK,TV> : Dictionary<TK,TV> , ISerializationC
             this.Add(_Keys[i], _Values[i]);
         }
     }
-    void OnGUI()
-    {
-        foreach (var kvp in this)
-            GUILayout.Label("Key: " + kvp.Key + " value: " + kvp.Value);
-    }
-
 }
