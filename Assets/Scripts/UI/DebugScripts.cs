@@ -33,6 +33,10 @@ public class DebugScripts : MonoBehaviour
         Debug.Log("TotalPower = " + TotalPower);
         Debug.Log("TotalStealth = " + TotalStealth);
     }
+    public void AddRandomItemToList()
+    {
+        MainManager.Instance.PlayerData.ItemList.Add(new ItemData("Tête", Random.Range(1, 4)));
+    }
     public void InitCustomSave()
     {
         for (int k = 0; k < 3; k++)
