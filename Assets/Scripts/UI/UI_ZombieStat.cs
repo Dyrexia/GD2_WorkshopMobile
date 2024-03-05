@@ -10,6 +10,10 @@ public class UI_ZombieStat : MonoBehaviour
     {
         Text = GetComponent<TextMeshProUGUI>();
     }
+    public void Start()
+    {
+        showZombieStat();
+    }
     public void showZombieStat()
     {
         Text.text = GetZombieStat(MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie]);

@@ -1980,12 +1980,12 @@ GameObject:
   - component: {fileID: 661897643}
   - component: {fileID: 661897642}
   m_Layer: 5
-  m_Name: Button
+  m_Name: CreateRandomZombies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &661897641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2003,7 +2003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.615723, y: 154.65286}
+  m_AnchoredPosition: {x: -442, y: -155}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661897642
@@ -2049,7 +2049,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 661897643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 280096406}
+        m_TargetAssemblyTypeName: DebugScripts, Assembly-CSharp
+        m_MethodName: InitCustomSave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &661897643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6619,9 +6631,10 @@ GameObject:
   - component: {fileID: 1753583823}
   - component: {fileID: 1753583825}
   - component: {fileID: 1753583824}
+  - component: {fileID: 1753583826}
   m_Layer: 5
   m_Name: Stats
-  m_TagString: Untagged
+  m_TagString: ZombieStats
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6750,6 +6763,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753583822}
   m_CullTransparentMesh: 1
+--- !u!114 &1753583826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753583822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebd66e44bea45c489afc0f02a9824cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788968456
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,12 +37,19 @@ public class DebugScripts : MonoBehaviour
     {
         for (int k = 0; k < 3; k++)
         {
-            MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
+            if (MainManager.Instance.PlayerData.zombieList.Count >= k+1)
+                MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
+            else
+                MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
             for (int i = 0; i < 6; i++)
             {
                 MainManager.Instance.PlayerData.zombieList[k].EquippedParts[i] = new ItemData("Osef", k);
             }
         }
+    }
+    public void DeleteSave()
+    {
+        SaveFunctions.ResetPlayerData();
     }
 
     private void Start()

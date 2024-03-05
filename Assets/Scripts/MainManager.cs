@@ -19,11 +19,10 @@ public class MainManager : MonoBehaviour
         else
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        Debug.Log(Instance.PlayerData.zombieList.Count);
     }
     private void Start()
     {
-        Debug.Log((DateTime.Now - DateTime.Now.AddHours(1)).TotalSeconds);
+        //Debug.Log((DateTime.Now - DateTime.Now.AddHours(1)).TotalSeconds);
     }
     void OnApplicationFocus(bool hasFocus)//on sauvegarde quand le joueur sort de l'application (sur mobile elle est jamais quittée, elle est pausée) et on charge quand il la lance
     {
@@ -31,5 +30,6 @@ public class MainManager : MonoBehaviour
             SaveFunctions.SavePlayerInfos();
         else
             SaveFunctions.LoadPlayerInfos();
+        Debug.Log(Instance.PlayerData.zombieList.Count);
     }
 }
