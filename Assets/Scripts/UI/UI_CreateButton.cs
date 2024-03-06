@@ -28,12 +28,8 @@ public class UI_CreateButton : MonoBehaviour
     
     
     public void CreateButton (string bodypart) 
-
     {
-      
-       
         if (MainManager.Instance != null && MainManager.Instance.PlayerData != null && MainManager.Instance.PlayerData.ItemLists != null)
-
             itemDataRef = MainManager.Instance.PlayerData.ItemLists[bodypart];
         foreach (ItemData item in this.itemDataRef)
         {
@@ -50,7 +46,5 @@ public class UI_CreateButton : MonoBehaviour
             
         }
         //newButton.onClick.AddListener(() => OnButtonClick(bodypart));
-    }
-        
-    
+    }    
 }
