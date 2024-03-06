@@ -56,8 +56,10 @@ public class DebugScripts : MonoBehaviour
         foreach (string key in ItemKeys)
         {
             MainManager.Instance.PlayerData.ItemLists[key].Clear();
+            Debug.Log(key);
             for (int k = 0; k<MainManager.Instance.PlayerData.InventorySize; k++)
             {
+               
                 MainManager.Instance.PlayerData.ItemLists[key].Add(new ItemData(key, Random.Range(1, 4)));
             }
         }
