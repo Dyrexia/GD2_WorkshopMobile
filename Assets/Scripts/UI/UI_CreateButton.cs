@@ -31,18 +31,10 @@ public class UI_CreateButton : MonoBehaviour
 
     {
       
-        Debug.Log(MainManager.Instance.PlayerData.ItemList.Count);
        
-        if (MainManager.Instance != null && MainManager.Instance.PlayerData != null && MainManager.Instance.PlayerData.ItemList != null)
-        
-            foreach (ItemData item in MainManager.Instance.PlayerData.ItemList)
-        {
-            if (item.Bodypart == bodypart)
-                itemDataRef.Add(item);
-             
-            
-            
-        }
+        if (MainManager.Instance != null && MainManager.Instance.PlayerData != null && MainManager.Instance.PlayerData.ItemLists != null)
+
+            itemDataRef = MainManager.Instance.PlayerData.ItemLists[bodypart];
         foreach (ItemData item in this.itemDataRef)
         {
             Debug.Log(item.Bodypart);
