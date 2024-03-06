@@ -11,6 +11,7 @@ public class ItemData//classe pour tout les données des items
 {
     private string[] NameChar = new string[]{ " irregardable"," moche", " passable", " magnifique" }; //lvl0, lvl1, lvl2; lvl3
     private float[,] PowerLevelModifier = new float[,] { {0,0} , {2,7} , {7, 10} , {10,12} };
+    private Vector3 RandomGeneration = new Vector3();
     public string Name;
     public string Description;
     public string Bodypart;
@@ -23,9 +24,10 @@ public class ItemData//classe pour tout les données des items
     public int Power;//max = 166 500
     public int Stealth;//max = 50
     public int Durability = 100;
-    public float FermentationModifier=0;
+    public int FermentationModifier=0;
     public ItemData(string bodypart, int level = 0, int skin = 0)//constructeur de la classe : seule la bodypart et le level sont importants, le reste est généré aléatoirement à partir de ces 2 infos
     {
+        RandomGeneration = UnityEngine.Random.insideUnitSphere;
         Bodypart = bodypart;
         Level = level;
         SkinIndex = skin;

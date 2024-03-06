@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class DebugScripts : MonoBehaviour
 {
+    private List<string> ItemKeys = new List<string>() { "Tête","Bras droit","Bras gauche","Torse","Jambe gauche","Jambe droite" };
     private int TotalInfection;
     private int TotalIntelligence;
     private int TotalPower;
@@ -40,19 +41,19 @@ public class DebugScripts : MonoBehaviour
     }
     public void InitCustomSave()
     {
-        for (int k = 0; k < MainManager.Instance.PlayerData.MaxZombies; k++)
-        {
-            MainManager.Instance.PlayerData.zombieList.Clear();
-            if (MainManager.Instance.PlayerData.zombieList.Count >= k + 1)
-                MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
-            else
-                MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
-            foreach (string key in MainManager.Instance.PlayerData.zombieList[k].EquippedParts.Keys)
-            {
-                MainManager.Instance.PlayerData.zombieList[k].EquippedParts[key] = new ItemData(key, Random.Range(1, 4));
-            }
-        }
-        foreach (string key in MainManager.Instance.PlayerData.ItemLists.Keys)
+        //for (int k = 0; k < MainManager.Instance.PlayerData.MaxZombies; k++)
+        //{
+        //    MainManager.Instance.PlayerData.zombieList.Clear();
+        //    if (MainManager.Instance.PlayerData.zombieList.Count >= k + 1)
+        //        MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
+        //    else
+        //        MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
+        //    foreach (string key in ItemKeys)
+        //    {
+        //        MainManager.Instance.PlayerData.zombieList[k].EquippedParts[key] = new ItemData(key, Random.Range(1, 4));
+        //    }
+        //}
+        foreach (string key in ItemKeys)
         {
             MainManager.Instance.PlayerData.ItemLists[key].Clear();
             for (int k = 0; k<MainManager.Instance.PlayerData.InventorySize; k++)
