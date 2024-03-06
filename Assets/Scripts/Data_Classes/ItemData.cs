@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
@@ -10,8 +11,8 @@ using UnityEngine;
 public class ItemData//classe pour tout les données des items
 {
     private string[] NameChar = new string[]{ " irregardable"," moche", " passable", " magnifique" }; //lvl0, lvl1, lvl2; lvl3
-    private float[,] PowerLevelModifier = new float[,] { {0,0} , {2,7} , {7, 10} , {10,12} };
-    private Vector3 RandomGeneration = new Vector3();
+    private float[,] LevelModifier = new float[,] { { 0, 0 } , {2,7} , {7, 10} , {10,12} };//[level,Stat] 0 = Power, 1 = Infection, 2 = Stealth
+    private Vector3 RandomGeneration;
     public string Name;
     public string Description;
     public string Bodypart;
@@ -27,7 +28,6 @@ public class ItemData//classe pour tout les données des items
     public int FermentationModifier=0;
     public ItemData(string bodypart, int level = 0, int skin = 0)//constructeur de la classe : seule la bodypart et le level sont importants, le reste est généré aléatoirement à partir de ces 2 infos
     {
-        RandomGeneration = UnityEngine.Random.insideUnitSphere;
         Bodypart = bodypart;
         Level = level;
         SkinIndex = skin;
@@ -39,4 +39,26 @@ public class ItemData//classe pour tout les données des items
         Stealth = UnityEngine.Random.Range(level*5,level*17);
         SizeInInventory = level;
     }
+    private void GenerateRandomModifier()//On génère 3 nombres aléatoires avec cette équation x²+y²+z²= 1. selon le nb de chiffres négatifs on applique des buffs aux positifs
+    {
+        RandomGeneration = new Vector3();
+        RandomGeneration = UnityEngine.Random.onUnitSphere;
+        RandomGeneration.z = Mathf.Abs(RandomGeneration.z);
+        if (RandomGeneration.x < 0 && RandomGeneration.y<0)
+        {
+            RandomGeneration.z -= RandomGeneration.x + RandomGeneration.y;
+        }
+        else if (RandomGeneration.y<0)
+        {
+            RandomGeneration.x -= RandomGeneration.y / 2;
+            RandomGeneration.z -= RandomGeneration.y / 2;
+        }
+        else if(RandomGeneration.x<0)
+        {
+            RandomGeneration.y -= RandomGeneration.x / 2;
+            RandomGeneration.z -= RandomGeneration.x / 2;
+        }
+        return;
+    }
 }
+
