@@ -20,6 +20,7 @@ public class UI_CreateButton : MonoBehaviour
             Button newButton = Instantiate(ButtonBodypart, CanvaButton);
             newButton.gameObject.SetActive(true);
             newButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = bodypart;
+            newButton.GetComponent<UI_ItemButton>();
         }
         //newButton.onClick.AddListener(() => OnButtonClick(bodypart));
     }    
