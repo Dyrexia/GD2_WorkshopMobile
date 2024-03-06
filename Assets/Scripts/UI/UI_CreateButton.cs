@@ -29,15 +29,14 @@ public class UI_CreateButton : MonoBehaviour
     
     public void CreateButton (string bodypart) 
     {
-        if (MainManager.Instance != null && MainManager.Instance.PlayerData != null && MainManager.Instance.PlayerData.ItemLists != null)
-            itemDataRef = MainManager.Instance.PlayerData.ItemLists[bodypart];
+        itemDataRef = MainManager.Instance.PlayerData.ItemLists[bodypart];
+        Debug.Log(itemDataRef[0]);
         foreach (ItemData item in this.itemDataRef)
         {
             Debug.Log(item.Bodypart);
             CountTest++;
             Debug.Log(CountTest);
             Button newButton = Instantiate(ButtonBodypart, CanvaButton);
-            newButton.transform.position = new Vector3(CanvaButton.position.x+20000, CanvaButton.position.y+3, CanvaButton.position.z+4);
            
           
           

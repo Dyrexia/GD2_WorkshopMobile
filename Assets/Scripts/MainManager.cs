@@ -33,6 +33,6 @@ public class MainManager : MonoBehaviour
             SaveFunctions.SavePlayerInfos();
         else
             SaveFunctions.LoadPlayerInfos();
-        Debug.Log(Instance.PlayerData.zombieList.Count);
+        Debug.Log(Instance.PlayerData.InventorySize);
     }
 }
