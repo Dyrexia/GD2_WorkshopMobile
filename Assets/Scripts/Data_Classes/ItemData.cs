@@ -5,13 +5,20 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
-
+/*Classe pour définir les items
+ *Pour le constructeur :
+ * Power = 2.23^Level (Nb choisi pour être environ égal à 166 500 au niveau 15)
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 
 [Serializable]
 public class ItemData//classe pour tout les données des items
 {
     private string[] NameChar = new string[]{ " irregardable"," moche", " passable", " magnifique" }; //lvl0, lvl1, lvl2; lvl3
-    private float[,] LevelModifier = new float[,] { { 0, 0 } , {2,7} , {7, 10} , {10,12} };//[level,Stat] 0 = Power, 1 = Infection, 2 = Stealth
     private Vector3 RandomGeneration;
     public string Name;
     public string Description;
@@ -35,7 +42,8 @@ public class ItemData//classe pour tout les données des items
         Name = Bodypart + NameChar[level];
         Infection = level / 2 + level % 2;//0 si lvl0, 1 si lvl1 ou 2, 2 si lvl3
         Intelligence = level;
-        Power =(int)Mathf.Floor(Mathf.Exp(UnityEngine.Random.Range(PowerLevelModifier[level, 0], PowerLevelModifier[level, 1])));//on utilise les bonre du tableau qu'on passe dans l'exponentielle
+        float templevel = level;
+        Power = Mathf.Pow(2.23f, (float)Level);
         Stealth = UnityEngine.Random.Range(level*5,level*17);
         SizeInInventory = level;
     }
