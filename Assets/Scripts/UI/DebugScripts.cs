@@ -40,8 +40,9 @@ public class DebugScripts : MonoBehaviour
     }
     public void InitCustomSave()
     {
-        for (int k = 0; k < 3; k++)
+        for (int k = 0; k < MainManager.Instance.PlayerData.MaxZombies; k++)
         {
+            MainManager.Instance.PlayerData.zombieList.Clear();
             if (MainManager.Instance.PlayerData.zombieList.Count >= k + 1)
                 MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
             else
@@ -49,6 +50,14 @@ public class DebugScripts : MonoBehaviour
             foreach (string key in MainManager.Instance.PlayerData.zombieList[k].EquippedParts.Keys)
             {
                 MainManager.Instance.PlayerData.zombieList[k].EquippedParts[key] = new ItemData(key, Random.Range(1, 4));
+            }
+        }
+        foreach (string key in MainManager.Instance.PlayerData.ItemLists.Keys)
+        {
+            MainManager.Instance.PlayerData.ItemLists[key].Clear();
+            for (int k = 0; k<MainManager.Instance.PlayerData.InventorySize; k++)
+            {
+                MainManager.Instance.PlayerData.ItemLists[key].Add(new ItemData(key, Random.Range(1, 4)));
             }
         }
     }
