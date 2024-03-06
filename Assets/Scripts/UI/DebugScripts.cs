@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DebugScripts : MonoBehaviour
@@ -33,24 +34,24 @@ public class DebugScripts : MonoBehaviour
         Debug.Log("TotalPower = " + TotalPower);
         Debug.Log("TotalStealth = " + TotalStealth);
     }
-    //public void AddRandomItemToList()
-    //{
-    //    MainManager.Instance.PlayerData.ItemList.Add(new ItemData("Tête", Random.Range(1, 4)));
-    //}
-    //public void InitCustomSave()
-    //{
-    //    for (int k = 0; k < 3; k++)
-    //    {
-    //        if (MainManager.Instance.PlayerData.zombieList.Count >= k+1)
-    //            MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
-    //        else
-    //            MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
-    //        for (int i = 0; i < 6; i++)
-    //        {
-    //            MainManager.Instance.PlayerData.zombieList[k].EquippedParts[i] = new ItemData("Osef", k);
-    //        }
-    //    }
-    //}
+    public void AddRandomItemToList()
+    {
+        MainManager.Instance.PlayerData.ItemLists["Tête"].Add(new ItemData("Tête", Random.Range(1, 4)));
+    }
+    public void InitCustomSave()
+    {
+        for (int k = 0; k < 3; k++)
+        {
+            if (MainManager.Instance.PlayerData.zombieList.Count >= k + 1)
+                MainManager.Instance.PlayerData.zombieList[k] = new ZombieData();
+            else
+                MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
+            foreach (string key in MainManager.Instance.PlayerData.zombieList[k].EquippedParts.Keys)
+            {
+                MainManager.Instance.PlayerData.zombieList[k].EquippedParts[key] = new ItemData(key, Random.Range(1, 4));
+            }
+        }
+    }
     public void DeleteSave()
     {
         SaveFunctions.ResetPlayerData();
