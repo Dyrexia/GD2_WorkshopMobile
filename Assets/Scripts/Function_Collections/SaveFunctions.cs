@@ -27,12 +27,12 @@ public class SaveFunctions
         MainManager.Instance.PlayerData.zombieList.Clear();
         MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
         MainManager.Instance.PlayerData.ItemLists.Clear();
-        MainManager.Instance.PlayerData.ItemLists.Add("Tête", new List<ItemData>());
-        MainManager.Instance.PlayerData.ItemLists.Add("Bras droit", new List<ItemData>());
-        MainManager.Instance.PlayerData.ItemLists.Add("Bras gauche", new List<ItemData>());
-        MainManager.Instance.PlayerData.ItemLists.Add("Torse", new List<ItemData>());
-        MainManager.Instance.PlayerData.ItemLists.Add("Jambe gauche", new List<ItemData>());
-        MainManager.Instance.PlayerData.ItemLists.Add("Jambe droite", new List<ItemData>());
+        MainManager.Instance.PlayerData.ItemLists.Add("Tête", new ItemListWrapper());
+        MainManager.Instance.PlayerData.ItemLists.Add("Bras droit", new ItemListWrapper());
+        MainManager.Instance.PlayerData.ItemLists.Add("Bras gauche", new ItemListWrapper());
+        MainManager.Instance.PlayerData.ItemLists.Add("Torse", new ItemListWrapper());
+        MainManager.Instance.PlayerData.ItemLists.Add("Jambe gauche", new ItemListWrapper());
+        MainManager.Instance.PlayerData.ItemLists.Add("Jambe droite", new ItemListWrapper());
         MainManager.Instance.PlayerData.MaxZombies = 3;
         MainManager.Instance.PlayerData.InventorySize = 10;
         SavePlayerInfos();

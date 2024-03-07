@@ -33,6 +33,5 @@ public class MainManager : MonoBehaviour
             SaveFunctions.SavePlayerInfos();
         else
             SaveFunctions.LoadPlayerInfos();
-        Debug.Log(Instance.PlayerData.InventorySize);
     }
 }

@@ -37,7 +37,7 @@ public class DebugScripts : MonoBehaviour
     }
     public void AddRandomItemToList()
     {
-        MainManager.Instance.PlayerData.ItemLists["Tête"].Add(new ItemData("Tête", Random.Range(1, 4)));
+        MainManager.Instance.PlayerData.ItemLists["Tête"].Items.Add(new ItemData("Tête", Random.Range(1, 4)));
     }
     public void InitCustomSave()
     {
@@ -55,12 +55,12 @@ public class DebugScripts : MonoBehaviour
         //}
         foreach (string key in ItemKeys)
         {
-            MainManager.Instance.PlayerData.ItemLists[key].Clear();
+            MainManager.Instance.PlayerData.ItemLists[key].Items.Clear();
             Debug.Log(key);
             for (int k = 0; k<MainManager.Instance.PlayerData.InventorySize; k++)
             {
                
-               MainManager.Instance.PlayerData.ItemLists[key].Add(new ItemData(key, Random.Range(1, 4)));
+               MainManager.Instance.PlayerData.ItemLists[key].Items.Add(new ItemData(key, Random.Range(1, 4)));
             }
         }
     }
