@@ -47,7 +47,7 @@ public class UI_ShowStat : MonoBehaviour
         Durabilite.text = Item.Durability.ToString();
         Pouvoir.text = Item.Power.ToString();
         Niveau.text = Item.Level.ToString();
-        DescriptionItem.text = Item.Description.ToString();
+        DescriptionItem.text = Item.Description;
        // ImageItem.image mettre image ici? 
 
  }
