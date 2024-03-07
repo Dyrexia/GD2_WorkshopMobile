@@ -26,7 +26,13 @@ public class SaveData//classes pour stocker toutes les données du joueur
         MaxZombies=3;
     }
 }
+[Serializable]
 public class ItemListWrapper
 {
-    public List<ItemData> Items;
+    public List<ItemWrapper> Items;
+}
+[Serializable]
+public class ItemWrapper
+{
+    public ItemData ItemData;
 }

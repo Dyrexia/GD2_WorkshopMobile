@@ -8,6 +8,7 @@ public class SaveFunctions
     public static void SavePlayerInfos()//on sauvegarde l'état des zombies et des items
     {
         string json = JsonUtility.ToJson(MainManager.Instance.PlayerData);
+        Debug.Log(json);
         File.WriteAllText(Application.persistentDataPath + "/SaveFile.json", json);
     }
     public static void LoadPlayerInfos()

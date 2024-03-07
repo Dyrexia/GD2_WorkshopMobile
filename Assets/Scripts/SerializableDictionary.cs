@@ -26,7 +26,7 @@ public class SerializableDictionary<TK,TV> : Dictionary<TK,TV> , ISerializationC
     }
     public void OnAfterDeserialize()//pour "charger"
     {
-        //this = new Dictionary<TK, TV>();
+        this.Clear();
         for(int i =0; i !=Math.Min(_Keys.Count, _Values.Count); i++)
         {
             this.Add(_Keys[i], _Values[i]);

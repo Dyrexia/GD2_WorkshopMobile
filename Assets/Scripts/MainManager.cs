@@ -34,4 +34,8 @@ public class MainManager : MonoBehaviour
         else
             SaveFunctions.LoadPlayerInfos();
     }
+    private void OnApplicationQuit()
+    {
+        SaveFunctions.SavePlayerInfos();
+    }
 }
