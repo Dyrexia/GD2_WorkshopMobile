@@ -40,7 +40,7 @@ public class ItemData//classe pour tout les données des items
         Level = level;
         SkinIndex = skin;
         IsInBarrel = false;
-        Name = Bodypart + NameChar[level];
+        Name = Bodypart + NameChar[level/5];
         GenerateRandomModifier();
         Infection = Mathf.CeilToInt((0.13f * level / 2) * (1 + (RandomGeneration.z + Bias.z)));//version factorisé
         Intelligence = level;

@@ -60,7 +60,7 @@ public class DebugScripts : MonoBehaviour
             for (int k = 0; k<MainManager.Instance.PlayerData.InventorySize; k++)
             {
                 MainManager.Instance.PlayerData.ItemLists[key].Items.Add(new ItemWrapper());
-                MainManager.Instance.PlayerData.ItemLists[key].Items[k].ItemData=(new ItemData(key, Random.Range(1,4)));
+                MainManager.Instance.PlayerData.ItemLists[key].Items[k].ItemData=(new ItemData(key, Random.Range(1,16)));
             }
             Debug.Log(MainManager.Instance.PlayerData.ItemLists[key].Items.Count);
         }
