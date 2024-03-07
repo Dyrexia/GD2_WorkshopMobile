@@ -5,6 +5,7 @@ using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class UI_ShowStat : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class UI_ShowStat : MonoBehaviour
     public TextMeshProUGUI Furtivite;
     public TextMeshProUGUI Durabilite;
     public TextMeshProUGUI Pouvoir;
+    public TextMeshProUGUI Niveau;
+    public TextMeshProUGUI DescriptionItem;
     public MainManager mainManagerRef;
+    public Image ImageItem;
     private int NombreDeBouton;
    
 
@@ -42,6 +46,10 @@ public class UI_ShowStat : MonoBehaviour
         Furtivite.text = Item.Stealth.ToString();
         Durabilite.text = Item.Durability.ToString();
         Pouvoir.text = Item.Power.ToString();
+        Niveau.text = Item.Level.ToString();
+        DescriptionItem.text = Item.Description.ToString();
+       // ImageItem.image mettre image ici? 
+
  }
     
     
