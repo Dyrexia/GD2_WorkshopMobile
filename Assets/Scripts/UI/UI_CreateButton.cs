@@ -15,13 +15,12 @@ public class UI_CreateButton : MonoBehaviour
     public void CreateButton (string bodypart) 
     {
         itemDataRef = MainManager.Instance.PlayerData.ItemLists[bodypart];
-        foreach (ItemData item in this.itemDataRef)
+        foreach (ItemData item in itemDataRef)
         {
             Button newButton = Instantiate(ButtonBodypart, CanvaButton);
+            Debug.Log("je passe dans la loop");  
+            newButton.GetComponent<UI_ItemButton>().Initialize(item);
             newButton.gameObject.SetActive(true);
-            Debug.Log("je passe dans la loop");
-            newButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = bodypart;
-            newButton.GetComponent<UI_ItemButton>();
         }
         //newButton.onClick.AddListener(() => OnButtonClick(bodypart));
     }    
