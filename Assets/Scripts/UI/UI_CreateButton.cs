@@ -19,6 +19,7 @@ public class UI_CreateButton : MonoBehaviour
         {
             Button newButton = Instantiate(ButtonBodypart, CanvaButton);
             newButton.gameObject.SetActive(true);
+            Debug.Log("je passe dans la loop");
             newButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = bodypart;
             newButton.GetComponent<UI_ItemButton>();
         }
