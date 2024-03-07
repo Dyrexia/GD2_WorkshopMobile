@@ -34,7 +34,6 @@ public class UI_ShowStat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        NomNewItem.text = "Mangervous"; 
     }
     public void NewStatsChangement(ItemData Item)
     {
