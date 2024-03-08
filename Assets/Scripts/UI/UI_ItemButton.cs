@@ -17,11 +17,17 @@ public class UI_ItemButton : MonoBehaviour
 
     public void Initialize(ItemData Item)
     {
-        ItemRef = Item;
-        GetComponentInChildren<TextMeshProUGUI>().text = ItemRef.Name;
+        ItemRef = Item; //= ItemRef.Name;
+            foreach(TextMeshProUGUI txt in GetComponentsInChildren<TextMeshProUGUI>())
+        {
+            if (txt.name == "NomItemNew")
+                txt.SetText(ItemRef.Name);
+            else if (txt.name =="StatNiveauItemNew")
+                txt.SetText(ItemRef.Level.ToString());
+        }
         PanelNewItemRef = GameObject.FindGameObjectWithTag("PanelNewItem");
         Ui_ShowStatScript = PanelNewItemRef.GetComponent<UI_ShowStat>();
-        //gameObject.GetComponent<Button>().onClick.AddListener(delegate { Ui_ShowStatScript.NewStatsChangement(ItemRef); });
+        gameObject.GetComponent<Button>().onClick.AddListener(delegate { Ui_ShowStatScript.NewStatsChangement(ItemRef); });
         Debug.Log("Start de l'instanciation");
     }
 }
