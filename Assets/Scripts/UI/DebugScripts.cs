@@ -57,7 +57,7 @@ public class DebugScripts : MonoBehaviour
         {
             MainManager.Instance.PlayerData.ItemLists[key].Items.Clear();
             Debug.Log(key);
-            for (int k = 0; k<MainManager.Instance.PlayerData.InventorySize; k++)
+            for (int k = 0; k</*MainManager.Instance.PlayerData.InventorySize*/1; k++)
             {
                 MainManager.Instance.PlayerData.ItemLists[key].Items.Add(new ItemWrapper());
                 MainManager.Instance.PlayerData.ItemLists[key].Items[k].ItemData=(new ItemData(key, Random.Range(1,16)));
