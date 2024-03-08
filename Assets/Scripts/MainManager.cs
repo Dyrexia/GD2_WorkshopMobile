@@ -22,6 +22,7 @@ public class MainManager : MonoBehaviour
     }
     private void Start()
     {
+        SaveFunctions.LoadPlayerInfos();
         //Debug.Log(Application.persistentDataPath + "/SaveFile.json");
         //PlayerData.zombieList[0].EquippedPartsDict.Add("Tête", new ItemData("EZ"));
         //Debug.Log(PlayerData.zombieList[0].EquippedParts["Tête"].Name);
