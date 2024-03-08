@@ -16,21 +16,54 @@ public class UI_ShowStat : MonoBehaviour
     public TextMeshProUGUI Intelligence;
     public TextMeshProUGUI Furtivite;
     public TextMeshProUGUI Durabilite;
-    public TextMeshProUGUI Pouvoir;
+    public TextMeshProUGUI Puissance;
     public TextMeshProUGUI Niveau;
     public TextMeshProUGUI DescriptionItem;
-    public MainManager mainManagerRef;
-    public Image ImageItem;
+    public List<GameObject> Sliders = new List<GameObject>();
+    public ItemData OldItemRef;
+    
+   
+   
     private int NombreDeBouton;
     public void NewStatsChangement(ItemData Item)
     {
+        OldItemRef = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[Item.Bodypart];
+
         Infection.text = Item.Infection.ToString();
+        CompareValues(OldItemRef.Infection, Item.Infection, Sliders[0].GetComponent<UI_ProgressBarStat>());
+
         Intelligence.text = Item.Intelligence.ToString();
+        CompareValues(OldItemRef.Intelligence, Item.Intelligence, Sliders[1].GetComponent<UI_ProgressBarStat>());
+
         Furtivite.text = Item.Stealth.ToString();
+        CompareValues(OldItemRef.Stealth, Item.Stealth, Sliders[2].GetComponent<UI_ProgressBarStat>());
+
         Durabilite.text = Item.Durability.ToString();
-        Pouvoir.text = Item.Power.ToString();
+
+        CompareValues(OldItemRef.Durability, Item.Durability, Sliders[3].GetComponent<UI_ProgressBarStat>());
+        Puissance.text = Item.Power.ToString();
+
+        CompareValues(OldItemRef.Power, Item.Power, Sliders[4].GetComponent<UI_ProgressBarStat>());
         Niveau.text = Item.Level.ToString();
+
+        CompareValues(OldItemRef.Level, Item.Level, Sliders[5].GetComponent<UI_ProgressBarStat>());
         DescriptionItem.text = Item.Description;
-       // ImageItem.image mettre image ici?
-     } 
+
+
+        float PuissanceNormalize = Mathf.Clamp01(1f-(Mathf.Pow(2.23f, Item.Level)-(float)Item.Power) / Mathf.Pow(2.23f, Item.Level));
+       
+     }
+
+    private void CompareValues(float OldStat, float NewStat,UI_ProgressBarStat Barre)
+
+    {
+        if (OldStat <= NewStat)
+        {
+            Barre.UpdateNumber(Mathf.Clamp01((NewStat - OldStat) / NewStat), Color.green);
+            return;
+        }
+        Barre.UpdateNumber(Mathf.Clamp01((OldStat - NewStat) / OldStat), Color.red);
+        return;
+    }
+
 }
