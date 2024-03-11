@@ -33,4 +33,12 @@ public class UI_InventoryButton : MonoBehaviour
         }
         
     }
+    public void DeleteItem()//ajouter la fenêtre de confirmation
+    {
+        for (int i = 0; i < MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Count; i++)
+        {
+            if (MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items[i].ItemData == item)
+                MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Remove(MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items[i]);
+        }
+    }
 }

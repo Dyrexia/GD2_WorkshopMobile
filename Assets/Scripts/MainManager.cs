@@ -4,10 +4,12 @@ using UnityEngine;
 using System;
 using System.ComponentModel;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
+    public List<Sprite> Skins;
     public SaveData PlayerData = new SaveData();
     public int CurrentZombie = 0;
 
