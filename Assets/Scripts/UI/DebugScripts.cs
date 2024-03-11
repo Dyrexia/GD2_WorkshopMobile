@@ -53,11 +53,13 @@ public class DebugScripts : MonoBehaviour
         //        MainManager.Instance.PlayerData.zombieList[k].EquippedParts[key] = new ItemData(key, Random.Range(1, 4));
         //    }
         //}
+        MainManager.Instance.PlayerData.zombieList.Clear();
+        MainManager.Instance.PlayerData.zombieList.Add(new ZombieData());
         foreach (string key in ItemKeys)
         {
             MainManager.Instance.PlayerData.ItemLists[key].Items.Clear();
             Debug.Log(key);
-            for (int k = 0; k</*MainManager.Instance.PlayerData.InventorySize*/1; k++)
+            for (int k = 0; k<MainManager.Instance.PlayerData.InventorySize; k++)
             {
                 MainManager.Instance.PlayerData.ItemLists[key].Items.Add(new ItemWrapper());
                 MainManager.Instance.PlayerData.ItemLists[key].Items[k].ItemData=(new ItemData(key, Random.Range(1,16)));

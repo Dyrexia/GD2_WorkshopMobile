@@ -39,14 +39,14 @@ public class UI_ShowStat : MonoBehaviour
         CompareValues(OldItemRef.Stealth, Item.Stealth, Sliders[2].GetComponent<UI_ProgressBarStat>());
 
         Durabilite.text = Item.Durability.ToString();
-
         CompareValues(OldItemRef.Durability, Item.Durability, Sliders[3].GetComponent<UI_ProgressBarStat>());
+
         Puissance.text = Item.Power.ToString();
-
         CompareValues(OldItemRef.Power, Item.Power, Sliders[4].GetComponent<UI_ProgressBarStat>());
-        Niveau.text = Item.Level.ToString();
 
+        Niveau.text = Item.Level.ToString();
         CompareValues(OldItemRef.Level, Item.Level, Sliders[5].GetComponent<UI_ProgressBarStat>());
+
         DescriptionItem.text = Item.Description;
 
 
@@ -59,10 +59,10 @@ public class UI_ShowStat : MonoBehaviour
     {
         if (OldStat <= NewStat)
         {
-            Barre.UpdateNumber(Mathf.Clamp01((NewStat - OldStat) / NewStat), Color.green);
+            Barre.UpdateNumber(1-Mathf.Clamp01((NewStat - OldStat) / NewStat), Color.green);
             return;
         }
-        Barre.UpdateNumber(Mathf.Clamp01((OldStat - NewStat) / OldStat), Color.red);
+        Barre.UpdateNumber(1-Mathf.Clamp01((OldStat - NewStat) / OldStat), Color.red);
         return;
     }
 
