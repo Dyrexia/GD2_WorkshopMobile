@@ -72,15 +72,19 @@ public class ItemData//classe pour tout les données des items
     }
 }
 
-class  LevelEqualityComparer : IEqualityComparer<ItemWrapper>
+class  LevelComparer : IComparer<ItemWrapper>
 {
-    public bool Equals(ItemWrapper x,ItemWrapper y)
+    int IComparer<ItemWrapper>.Compare(ItemWrapper x, ItemWrapper y)
     {
-        if (x.ItemData.Level<=y.ItemData.Level) return true;
-        return false;
+        if (x.ItemData.Level > y.ItemData.Level)
+            return 1;
+        if (x.ItemData.Level < y.ItemData.Level)
+            return -1;
+        else
+            return 0;
     }
-    public int GetHashCode(ItemWrapper obj)
-    {
-        return obj.ItemData.Level.GetHashCode();
-    }
+    //public int GetHashCode(ItemWrapper obj)
+    //{
+    //    return obj.ItemData.Level.GetHashCode();
+    //}
 }
