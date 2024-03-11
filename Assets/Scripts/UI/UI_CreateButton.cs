@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,8 @@ public class UI_CreateButton : MonoBehaviour
     public Button ButtonBodypart;
     public Transform CanvaButton;
     public UI_ShowStat UI_ShowStatRef;
+ 
+
     // Start is called before the first frame update
     public void CreateButton (string bodypart) 
     {
@@ -27,5 +30,22 @@ public class UI_CreateButton : MonoBehaviour
             }
         }
         //newButton.onClick.AddListener(() => OnButtonClick(bodypart));
-    }    
+    }
+
+    public void DestroyButton()
+    {
+        int j = GameObject.FindGameObjectsWithTag("ButtonTag").Length;
+        for (int i = 0; i< j; i++)
+        {
+            GameObject.FindGameObjectsWithTag("ButtonTag")[0].SetActive(false);
+
+
+        }
+    }
 }
+
+
+
+
+
+

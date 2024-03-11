@@ -8,6 +8,7 @@ TagManager:
   - ZombieStats
   - PanelNewItem
   - InventoryButtons
+  - ButtonTag
   layers:
   - Default
   - TransparentFX
