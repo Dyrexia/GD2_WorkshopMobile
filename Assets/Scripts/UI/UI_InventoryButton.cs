@@ -8,13 +8,16 @@ public class UI_InventoryButton : MonoBehaviour
     private ItemWrapper TempItem;
     private GameObject PanelNewItemRef;
     private UI_ShowStat Ui_ShowStatScript;
-    private void Start()
+
+    [SerializeField] private GameObject ConfirmationWindow;
+
+        private void Start()
     {   
         PanelNewItemRef = GameObject.FindGameObjectWithTag("PanelNewItem");
         Ui_ShowStatScript = PanelNewItemRef.GetComponent<UI_ShowStat>();
     }
     public void EquipItem()
-
+        
     {
         TempItem = new ItemWrapper();
         TempItem.ItemData = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[item.Bodypart];
@@ -45,11 +48,28 @@ public class UI_InventoryButton : MonoBehaviour
         }
         
     }
+
+    public void OpenConfirmationWindow()
+    {
+        ConfirmationWindow.gameObject.SetActive(true);
+        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().yesButton.onClick.AddListener(DeleteItem);
+        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().noButton.onClick.AddListener(cancelDelete);
+    }
+    private void cancelDelete()
+    {
+        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().yesButton.onClick.RemoveAllListeners();
+        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().noButton.onClick.RemoveAllListeners();
+        ConfirmationWindow.gameObject.SetActive(false);
+
+    }
+
     public void DeleteItem()//ajouter la fenêtre de confirmation
     {
+        Debug.Log(gameObject.name);
         TempItem = new ItemWrapper();
         TempItem.ItemData = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[item.Bodypart];
         Ui_ShowStatScript.NewStatsChangement(TempItem.ItemData);
+        
         for (int i = 0; i < MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Count; i++)
         {
             if (MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items[i].ItemData == item)
@@ -57,5 +77,6 @@ public class UI_InventoryButton : MonoBehaviour
 
 
         }
+        cancelDelete();
     }
 }
