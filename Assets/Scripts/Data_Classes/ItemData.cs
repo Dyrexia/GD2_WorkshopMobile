@@ -68,6 +68,7 @@ public class ItemData//classe pour tout les données des items
             RandomGeneration.z -= RandomGeneration.x / 2;
         }
         return;
+
     }
 }
 
