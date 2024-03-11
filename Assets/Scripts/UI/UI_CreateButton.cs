@@ -14,32 +14,17 @@ public class UI_CreateButton : MonoBehaviour
     // Start is called before the first frame update
     public void CreateButton (string bodypart) 
     {
-        //itemDataRef = MainManager.Instance.PlayerData.ItemLists[bodypart].Items.Sort();
+        itemDataRef = MainManager.Instance.PlayerData.ItemLists[bodypart].Items;
+        LevelComparer LevelComparer = new LevelComparer();
+        itemDataRef.Sort(LevelComparer);
+        itemDataRef.Reverse();
         foreach (ItemWrapper item in itemDataRef)
         {
-            if (item >)
-            {
-
-                
-            }
-            
-            else
-            {
-                
-
-            }
-           
-          
-
-            if(item== itemDataRef[itemDataRef.Count - 1])
             {
                 Button newButton = Instantiate(ButtonBodypart, CanvaButton);
                 newButton.GetComponent<UI_ItemButton>().Initialize(item.ItemData);
                 newButton.gameObject.SetActive(true);
             }
-
-           
-
         }
         //newButton.onClick.AddListener(() => OnButtonClick(bodypart));
     }    
