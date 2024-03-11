@@ -71,3 +71,15 @@ public class ItemData//classe pour tout les données des items
     }
 }
 
+class  LevelEqualityComparer : IEqualityComparer<ItemWrapper>
+{
+    public bool Equals(ItemWrapper x,ItemWrapper y)
+    {
+        if (x.ItemData.Level<=y.ItemData.Level) return true;
+        return false;
+    }
+    public int GetHashCode(ItemWrapper obj)
+    {
+        return obj.ItemData.Level.GetHashCode();
+    }
+}
