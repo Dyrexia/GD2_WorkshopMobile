@@ -83,8 +83,53 @@ class  LevelComparer : IComparer<ItemWrapper>
         else
             return 0;
     }
-    //public int GetHashCode(ItemWrapper obj)
-    //{
-    //    return obj.ItemData.Level.GetHashCode();
-    //}
 }
+class PowerComparer : IComparer<ItemWrapper>
+{
+    int IComparer<ItemWrapper>.Compare(ItemWrapper x, ItemWrapper y)
+    {
+        if (x.ItemData.Power > y.ItemData.Power)
+            return 1;
+        if (x.ItemData.Power < y.ItemData.Power)
+            return -1;
+        else
+            return 0;
+    }
+}
+class StealthComparer : IComparer<ItemWrapper>
+{
+    int IComparer<ItemWrapper>.Compare(ItemWrapper x, ItemWrapper y)
+    {
+        if (x.ItemData.Stealth > y.ItemData.Stealth)
+            return 1;
+        if (x.ItemData.Stealth < y.ItemData.Stealth)
+            return -1;
+        else
+            return 0;
+    }
+}
+class IntelligenceComparer : IComparer<ItemWrapper>
+{
+    int IComparer<ItemWrapper>.Compare(ItemWrapper x, ItemWrapper y)
+    {
+        if (x.ItemData.Intelligence > y.ItemData.Intelligence)
+            return 1;
+        if (x.ItemData.Intelligence < y.ItemData.Intelligence)
+            return -1;
+        else
+            return 0;
+    }
+}
+class InfectionComparer : IComparer<ItemWrapper>
+{
+    int IComparer<ItemWrapper>.Compare(ItemWrapper x, ItemWrapper y)
+    {
+        if (x.ItemData.Infection > y.ItemData.Infection)
+            return 1;
+        if (x.ItemData.Infection < y.ItemData.Infection)
+            return -1;
+        else
+            return 0;
+    }
+}
+
