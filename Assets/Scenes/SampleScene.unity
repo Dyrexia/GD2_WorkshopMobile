@@ -1856,6 +1856,7 @@ GameObject:
   - component: {fileID: 351101199}
   - component: {fileID: 351101198}
   - component: {fileID: 351101197}
+  - component: {fileID: 351101200}
   m_Layer: 5
   m_Name: PanelConfirmation
   m_TagString: Untagged
@@ -1948,6 +1949,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351101195}
   m_CullTransparentMesh: 1
+--- !u!114 &351101200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351101195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4683b8ea720783b4b94cb6f2cd38f8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yesButton: {fileID: 974629220}
+  noButton: {fileID: 1433238603}
 --- !u!1 &425038338
 GameObject:
   m_ObjectHideFlags: 0
@@ -4669,6 +4684,7 @@ MonoBehaviour:
     Stealth: 0
     Durability: 0
     FermentationModifier: 0
+  ConfirmationWindow: {fileID: 1829494052}
 --- !u!1 &829730768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5602,7 +5618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -585}
+  m_AnchoredPosition: {x: 300, y: 0}
   m_SizeDelta: {x: 600, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974629220
@@ -9536,7 +9552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1899, y: -585}
+  m_AnchoredPosition: {x: 900, y: 0}
   m_SizeDelta: {x: 600, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433238603
@@ -10815,9 +10831,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1829494057}
-        m_TargetAssemblyTypeName: UI_HideShow, Assembly-CSharp
-        m_MethodName: ShowCanvas
+      - m_Target: {fileID: 809735706}
+        m_TargetAssemblyTypeName: UI_InventoryButton, Assembly-CSharp
+        m_MethodName: OpenConfirmationWindow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12091,7 +12107,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829494052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -12099,8 +12115,8 @@ RectTransform:
   - {fileID: 351101196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
