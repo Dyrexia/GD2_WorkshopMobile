@@ -5161,6 +5161,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25213170f53232409302e0b8a166c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Skins:
+  - {fileID: 21300000, guid: 4d071b38edc2a644f8e4ff3b7aa3faea, type: 3}
+  - {fileID: 21300000, guid: 5b4821ae50639e447a5efb79c13aea91, type: 3}
+  - {fileID: 21300000, guid: 8bf51ebe70273e3478172a311dc98062, type: 3}
+  - {fileID: 21300000, guid: 06620fab901913144b99b81edadcd21f, type: 3}
+  - {fileID: 21300000, guid: 3b0ce2259f85af0418490b10537fd687, type: 3}
+  - {fileID: 21300000, guid: f3c5389fbd767b34e87537b5a36b02b9, type: 3}
+  - {fileID: 21300000, guid: 65c3b6857297e0a43b80074a3303bbdb, type: 3}
+  - {fileID: 21300000, guid: 346920409c9700e4aa1e3de0ad4031f8, type: 3}
+  - {fileID: 21300000, guid: d665bb62b884edb44af9c19b07565adc, type: 3}
+  - {fileID: 21300000, guid: 0ba8534bcd6694c40b4676fef0ac15da, type: 3}
+  - {fileID: 21300000, guid: 46631a1ef5cd2e8459731dc60fa7d96f, type: 3}
+  - {fileID: 21300000, guid: 04a816a03c40ef740a522e678cd61bb4, type: 3}
+  - {fileID: 21300000, guid: 9e6fa42f354587247beec2404df0cd94, type: 3}
+  - {fileID: 21300000, guid: a5471ada49850b242a58c1374c6eee93, type: 3}
+  - {fileID: 21300000, guid: ea27541e190c252469bb0d234a9e48b7, type: 3}
+  - {fileID: 21300000, guid: 959565503f6cc814fa3fd18ce9e2d125, type: 3}
+  - {fileID: 21300000, guid: 778a2d867dad3264397eb74bb687db40, type: 3}
+  - {fileID: 21300000, guid: e24ffd0cbed63a54a984f6707f1a6b4c, type: 3}
+  - {fileID: 21300000, guid: 7335ac774e65905408ec5483c562ff71, type: 3}
+  - {fileID: 21300000, guid: ebfc8aa9d1af6e948b4c685fee782c49, type: 3}
+  - {fileID: 21300000, guid: 006b93fed4d43f9489beca5c2aaddf85, type: 3}
+  - {fileID: 21300000, guid: 28c80c1f01f222445a9d61a745948852, type: 3}
+  - {fileID: 21300000, guid: 928eb901ee0372545a8f85b4ea783976, type: 3}
+  - {fileID: 21300000, guid: 9ac6fecb21e4f8046a7034d26b766773, type: 3}
   PlayerData:
     zombieList: []
     ItemLists:
