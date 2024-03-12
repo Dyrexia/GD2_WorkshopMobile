@@ -18,7 +18,7 @@ public class ZombieData//classe pour les données des zombies
         Name = name;
         IsAway = false;
         EquippedParts.Add("Tête",new ItemData("Tête"));
-        EquippedParts.Add("Bras gauche", new ItemData("Bras gauche"));
+        EquippedParts.Add("Bras gauche", new ItemData("Bras gauche")); 
         EquippedParts.Add("Bras droit", new ItemData("Bras droit"));
         EquippedParts.Add("Torse", new ItemData("Torse"));
         EquippedParts.Add("Jambe gauche", new ItemData("Jambe gauche"));
