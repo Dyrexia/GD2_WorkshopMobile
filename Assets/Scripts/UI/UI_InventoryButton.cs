@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_InventoryButton : MonoBehaviour
 {
@@ -8,13 +9,14 @@ public class UI_InventoryButton : MonoBehaviour
     private ItemWrapper TempItem;
     private GameObject PanelNewItemRef;
     private UI_ShowStat Ui_ShowStatScript;
-
     [SerializeField] private GameObject ConfirmationWindow;
+    [SerializeField] private GameObject Frigo;
 
         private void Start()
     {   
         PanelNewItemRef = GameObject.FindGameObjectWithTag("PanelNewItem");
         Ui_ShowStatScript = PanelNewItemRef.GetComponent<UI_ShowStat>();
+       
     }
     public void EquipItem()
         
@@ -52,20 +54,35 @@ public class UI_InventoryButton : MonoBehaviour
     public void OpenConfirmationWindow()
     {
         ConfirmationWindow.gameObject.SetActive(true);
-        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().yesButton.onClick.AddListener(DeleteItem);
-        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().noButton.onClick.AddListener(cancelDelete);
+        ConfirmationWindow.GetComponentInChildren<UI_ConfirmationDelete>().yesButton.onClick.AddListener(DeleteItem);
+        ConfirmationWindow.GetComponentInChildren<UI_ConfirmationDelete>().noButton.onClick.AddListener(cancelDelete);
     }
+
+    //IEnumerator WaitConfirmation ()
+    //{
+
+
+    //    yield return ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().IsConfirmed();
+        
+    
+
+    //}
+
+
+
+
+
     private void cancelDelete()
     {
-        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().yesButton.onClick.RemoveAllListeners();
-        ConfirmationWindow.GetComponent<UI_ConfirmationDelete>().noButton.onClick.RemoveAllListeners();
+        ConfirmationWindow.GetComponentInChildren<UI_ConfirmationDelete>().yesButton.onClick.RemoveAllListeners();
+        ConfirmationWindow.GetComponentInChildren<UI_ConfirmationDelete>().noButton.onClick.RemoveAllListeners();
         ConfirmationWindow.gameObject.SetActive(false);
 
     }
 
     public void DeleteItem()//ajouter la fenêtre de confirmation
     {
-        Debug.Log(gameObject.name);
+
         TempItem = new ItemWrapper();
         TempItem.ItemData = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[item.Bodypart];
         Ui_ShowStatScript.NewStatsChangement(TempItem.ItemData);
@@ -74,9 +91,9 @@ public class UI_InventoryButton : MonoBehaviour
         {
             if (MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items[i].ItemData == item)
                 MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Remove(MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items[i]);
-
-
         }
+        Frigo.GetComponent<UI_CreateButton>().DestroyButton();
+        Frigo.GetComponent<UI_CreateButton>().CreateButton(TempItem.ItemData.Bodypart);
         cancelDelete();
     }
 }

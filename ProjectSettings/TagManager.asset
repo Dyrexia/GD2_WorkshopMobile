@@ -9,6 +9,12 @@ TagManager:
   - PanelNewItem
   - InventoryButtons
   - ButtonTag
+  - "FrigoT\xEAte"
+  - FrigoTorse
+  - FrigoBras gauche
+  - FrigoBras droit
+  - FrigoJambe gauche
+  - FirgoJambe droite
   layers:
   - Default
   - TransparentFX
