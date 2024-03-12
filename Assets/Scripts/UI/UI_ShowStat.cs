@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
+using static UnityEditor.Progress;
 
 public class UI_ShowStat : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class UI_ShowStat : MonoBehaviour
     public TextMeshProUGUI DescriptionItem;
     public List<GameObject> Sliders = new List<GameObject>();
     public ItemData OldItemRef;
+    public string bodypart;
     
    
    
@@ -47,6 +50,8 @@ public class UI_ShowStat : MonoBehaviour
         Niveau.text = Item.Level.ToString();
         CompareValues(OldItemRef.Level, Item.Level, Sliders[5].GetComponent<UI_ProgressBarStat>());
 
+        NomNewItem.text = Item.Name.ToString();
+
         DescriptionItem.text = Item.Description;
 
 
@@ -62,8 +67,15 @@ public class UI_ShowStat : MonoBehaviour
             Barre.UpdateNumber(1-Mathf.Clamp01((NewStat - OldStat) / NewStat), Color.green);
             return;
         }
-        Barre.UpdateNumber(1-Mathf.Clamp01((OldStat - NewStat) / OldStat), Color.red);
-        return;
+            Barre.UpdateNumber(1-Mathf.Clamp01((OldStat - NewStat) / OldStat), Color.red);
+            return;
     }
 
+    
+    
+    private void Start()
+    {
+        OldItemRef = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[bodypart];
+        NewStatsChangement(OldItemRef);
+    }
 }

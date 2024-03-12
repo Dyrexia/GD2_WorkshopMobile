@@ -34,7 +34,6 @@ public class UI_ItemButton : MonoBehaviour
             Ui_ShowStatScript.NewStatsChangement(ItemRef);
             GameObject.FindGameObjectWithTag("InventoryButtons").GetComponent<UI_InventoryButton>().item = Item;
         });
-        Debug.Log("Start de l'instanciation");
     }
     private void OnDisable()
     {
