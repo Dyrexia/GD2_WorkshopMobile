@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library:
-  - m_Name: LeftArm
-    m_Hash: 730008282
+  - m_Name: Bras gauche
+    m_Hash: 105533151
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Feminin
@@ -39,8 +39,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -2863590402548021541, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
-  - m_Name: RightArm
-    m_Hash: 733214503
+  - m_Name: Bras droit
+    m_Hash: 749038417
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Feminin
@@ -65,8 +65,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 7388351885363871409, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
-  - m_Name: Head
-    m_Hash: 130111906
+  - m_Name: "T\xEAte"
+    m_Hash: 221064813
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Feminin
@@ -91,8 +91,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 7524707430684713046, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
-  - m_Name: Torso
-    m_Hash: 647926657
+  - m_Name: Torse
+    m_Hash: 105609887
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Feminin
@@ -117,8 +117,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -3975268637041683331, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
-  - m_Name: RightLeg
-    m_Hash: 104663548
+  - m_Name: Jambe droite
+    m_Hash: 861839771
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Feminin
@@ -143,8 +143,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 7306070985530729361, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
-  - m_Name: LeftLeg
-    m_Hash: 101577729
+  - m_Name: Jambe gauche
+    m_Hash: 114184471
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: Feminin
@@ -170,5 +170,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638458519905152317
+  m_ModificationHash: 638459360710531776
   m_Version: 1

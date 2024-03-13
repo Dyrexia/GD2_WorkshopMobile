@@ -25,7 +25,7 @@ public class ItemData//classe pour tout les données des items
     public string Description;
     public string Bodypart;
     public bool IsInBarrel;
-    public int SkinIndex;//=level
+    public string SkinLabel;
     public int Level;
     public int SizeInInventory;//=level
     public int Infection; //max = 2
@@ -34,11 +34,11 @@ public class ItemData//classe pour tout les données des items
     public int Stealth;//max = 60
     public int Durability = 100;
     public int FermentationModifier=0;
-    public ItemData(string bodypart, int level = 0, int skin = 0)//constructeur de la classe : seule la bodypart et le level sont importants, le reste est généré aléatoirement à partir de ces 2 infos
+    public ItemData(string bodypart, int level = 0, string skin = "Feminin")//constructeur de la classe : seule la bodypart et le level sont importants, le reste est généré aléatoirement à partir de ces 2 infos
     {
         Bodypart = bodypart;
         Level = level;
-        SkinIndex = skin;
+        SkinLabel = skin;
         IsInBarrel = false;
         Name = Bodypart + NameChar[level/5];
         GenerateRandomModifier();

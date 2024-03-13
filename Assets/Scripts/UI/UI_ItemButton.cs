@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.U2D.Animation;
 using UnityEngine.UI;
 
 public class UI_ItemButton : MonoBehaviour
@@ -34,6 +35,7 @@ public class UI_ItemButton : MonoBehaviour
             Ui_ShowStatScript.NewStatsChangement(ItemRef);
             GameObject.FindGameObjectWithTag("InventoryButtons").GetComponent<UI_InventoryButton>().item = Item;
         });
+        GetComponentInChildren<Image>().sprite=GetComponentInParent<SpriteLibrary>().GetSprite(Item.Bodypart,Item.SkinLabel);
     }
     private void OnDisable()
     {
