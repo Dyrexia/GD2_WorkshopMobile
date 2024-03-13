@@ -720,7 +720,7 @@ MonoBehaviour:
     Description: 
     Bodypart: 
     IsInBarrel: 0
-    SkinIndex: 0
+    SkinLabel: 
     Level: 0
     SizeInInventory: 0
     Infection: 0
