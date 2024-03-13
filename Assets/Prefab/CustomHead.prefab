@@ -725,7 +725,7 @@ MonoBehaviour:
     Description: 
     Bodypart: 
     IsInBarrel: 0
-    SkinIndex: 0
+    SkinLabel: 
     Level: 0
     SizeInInventory: 0
     Infection: 0
@@ -1337,6 +1337,7 @@ GameObject:
   - component: {fileID: 2894849068797524961}
   - component: {fileID: 4591355699226065606}
   - component: {fileID: 9023672783708208675}
+  - component: {fileID: 37743213563812327}
   m_Layer: 5
   m_Name: PanelNewItem
   m_TagString: PanelNewItem
@@ -1446,7 +1447,7 @@ MonoBehaviour:
     Description: 
     Bodypart: 
     IsInBarrel: 0
-    SkinIndex: 0
+    SkinLabel: 
     Level: 0
     SizeInInventory: 0
     Infection: 0
@@ -1474,7 +1475,7 @@ MonoBehaviour:
     Description: 
     Bodypart: 
     IsInBarrel: 0
-    SkinIndex: 0
+    SkinLabel: 
     Level: 0
     SizeInInventory: 0
     Infection: 0
@@ -1484,6 +1485,21 @@ MonoBehaviour:
     Durability: 0
     FermentationModifier: 0
   bodypart: 
+  ImageNewItem: {fileID: 2279770490478515332}
+--- !u!114 &37743213563812327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814335804878009009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 31e6a7ffbd8f75b459062034021c40d0, type: 3}
 --- !u!1 &2224112641557529238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1838,6 @@ GameObject:
   - component: {fileID: 17893290436373687}
   - component: {fileID: 1947980751357733969}
   - component: {fileID: 6175589529429352672}
-  - component: {fileID: 7176823862417725813}
   m_Layer: 5
   m_Name: CustomHead
   m_TagString: Untagged
@@ -1953,20 +1968,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &7176823862417725813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942013479941302046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
 --- !u!1 &3107303178383075336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,6 +3658,7 @@ GameObject:
   - component: {fileID: 3347280884275543594}
   - component: {fileID: 2227911620823659742}
   - component: {fileID: 2241557999473222520}
+  - component: {fileID: 2290939427389558655}
   m_Layer: 5
   m_Name: PanelFridgeInterior
   m_TagString: Untagged
@@ -3680,7 +3682,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 425, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 750, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5202245165747164470
@@ -3761,6 +3763,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &2290939427389558655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425222130858465490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 31e6a7ffbd8f75b459062034021c40d0, type: 3}
 --- !u!1 &4574590078962511830
 GameObject:
   m_ObjectHideFlags: 0
@@ -6908,6 +6924,7 @@ GameObject:
   - component: {fileID: 8523649416684949815}
   - component: {fileID: 3923404803545260084}
   - component: {fileID: 2279770490478515332}
+  - component: {fileID: 7338799507101658515}
   m_Layer: 5
   m_Name: ItemSelectioneImage
   m_TagString: Untagged
@@ -6972,3 +6989,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7338799507101658515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058866983103076443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5540409945c9e44395db1ce9a33a296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

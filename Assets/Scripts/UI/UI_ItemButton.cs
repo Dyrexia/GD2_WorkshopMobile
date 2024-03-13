@@ -30,12 +30,12 @@ public class UI_ItemButton : MonoBehaviour
         }
         PanelNewItemRef = GameObject.FindGameObjectWithTag("PanelNewItem");
         Ui_ShowStatScript = PanelNewItemRef.GetComponent<UI_ShowStat>();
-        gameObject.GetComponent<Button>().onClick.AddListener(delegate 
-        { 
+        gameObject.GetComponent<Button>().onClick.AddListener(delegate
+        {
             Ui_ShowStatScript.NewStatsChangement(ItemRef);
             GameObject.FindGameObjectWithTag("InventoryButtons").GetComponent<UI_InventoryButton>().item = Item;
         });
-        GetComponentInChildren<Image>().sprite=GetComponentInParent<SpriteLibrary>().GetSprite(Item.Bodypart,Item.SkinLabel);
+        GetComponentInChildren<UI_InventoryButton_ChangeImage>().UpdateImage(GetComponentInParent<SpriteLibrary>().GetSprite(Item.Bodypart,Item.SkinLabel));
     }
     private void OnDisable()
     {

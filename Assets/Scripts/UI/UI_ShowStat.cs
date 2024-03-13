@@ -6,6 +6,8 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.U2D.Animation;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class UI_ShowStat : MonoBehaviour
@@ -23,6 +25,7 @@ public class UI_ShowStat : MonoBehaviour
     public List<GameObject> Sliders = new List<GameObject>();
     public ItemData OldItemRef;
     public string bodypart;
+    public UnityEngine.UI.Image ImageNewItem;
     
    
    
@@ -55,6 +58,7 @@ public class UI_ShowStat : MonoBehaviour
 
 
         float PuissanceNormalize = Mathf.Clamp01(1f-(Mathf.Pow(2.23f, Item.Level)-(float)Item.Power) / Mathf.Pow(2.23f, Item.Level));
+        ImageNewItem.sprite=GetComponent<SpriteLibrary>().GetSprite(Item.Bodypart,Item.SkinLabel);
        
      }
 
