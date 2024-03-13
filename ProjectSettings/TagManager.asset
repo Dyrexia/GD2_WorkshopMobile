@@ -16,6 +16,7 @@ TagManager:
   - FrigoJambe gauche
   - FirgoJambe droite
   - ImageItemInventaire
+  - Zombie
   layers:
   - Default
   - TransparentFX

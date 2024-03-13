@@ -11,6 +11,7 @@ public class Zombie_Visuals : MonoBehaviour
         {
             resolver.SetCategoryAndLabel(resolver.GetCategory(), MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[resolver.GetCategory()].SkinLabel);
         }
+        
     }
     private void Start()
     {
