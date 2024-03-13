@@ -15,6 +15,7 @@ TagManager:
   - FrigoBras droit
   - FrigoJambe gauche
   - FirgoJambe droite
+  - ImageItemInventaire
   layers:
   - Default
   - TransparentFX

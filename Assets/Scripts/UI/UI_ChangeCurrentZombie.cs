@@ -12,6 +12,7 @@ public class UI_ChangeCurrentZombie : MonoBehaviour
             MainManager.Instance.CurrentZombie = MainManager.Instance.PlayerData.zombieList.Count - 1;
         else
             MainManager.Instance.CurrentZombie--;
+        UpdateZombie();
     }
     public void CycleZombieForward()//inverse
     {
@@ -19,5 +20,10 @@ public class UI_ChangeCurrentZombie : MonoBehaviour
             MainManager.Instance.CurrentZombie = 0;
         else
             MainManager.Instance.CurrentZombie++;
+        UpdateZombie();
+    }
+    private void UpdateZombie()
+    {
+        GameObject.FindGameObjectWithTag("Zombie").GetComponent<Zombie_Visuals>().UpdateZombieSkin();
     }
 }
