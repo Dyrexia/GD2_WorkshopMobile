@@ -409,7 +409,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 986399141}
         m_TargetAssemblyTypeName: UI_DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextPhrase
+        m_MethodName: PhraseVerification
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2678,9 +2678,10 @@ MonoBehaviour:
   dialogue:
     nameOfNPC: Mickael jackson
     sentences:
-    - salut la team j'adore ca
-    - ouai oauis aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    - "Hey! Je m'appelle Martha, je suis l\xE0 pour t'aider!"
+    - "Tout d'abord, clique sur l'image de zombie en plein milieu de l'\xE9cran,
+      tu pourras ensuite d\xE9couvrir comment personnaliser"
+    - "Bravo! Tu commences d\xE9j\xE0 \xE0 devenir un vrai charcutier! "
 --- !u!114 &187488020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11863,6 +11864,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 201153566}
   DialogueText: {fileID: 69557936}
+  currentPhrase: 
+  PhraseComplete: 0
 --- !u!1 &999653660
 GameObject:
   m_ObjectHideFlags: 0
