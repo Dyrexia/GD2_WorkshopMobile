@@ -2,22 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class UI_DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI DialogueText;
+    //public Image ImageSpawn;
     private Queue<string> sentences;
+  //  private Queue<Sprite> ImageLié;
     private float letterSpeed = 0.05f;
    [SerializeField] private string currentPhrase;
    [SerializeField] private bool PhraseComplete;
+    
    
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+       // ImageLié = new Queue<Sprite>();
     }
 
     public void StartDialogue(UI_TutorialDialogue dialogueScript)
@@ -25,11 +30,16 @@ public class UI_DialogueManager : MonoBehaviour
         nameText.text = dialogueScript.nameOfNPC;
 
         sentences.Clear();
+       // ImageLié.Clear();
 
         foreach (string Phrase in dialogueScript.sentences)
         {
             sentences.Enqueue(Phrase);
 
+        }
+     //   foreach (Sprite image in dialogueScript.tutorialImage)
+        {
+      //      ImageLié.Enqueue(image);
         }
         DisplayNextPhrase();
 
@@ -69,6 +79,9 @@ public class UI_DialogueManager : MonoBehaviour
         string Phrase = sentences.Dequeue();
         DialogueText.text = Phrase;
         currentPhrase = Phrase;
+       // Sprite Image = ImageLié.Dequeue();
+      //  ImageSpawn.sprite = Image;
+
         StopAllCoroutines();
         StartCoroutine(TypePhrase(Phrase, letterSpeed));
 

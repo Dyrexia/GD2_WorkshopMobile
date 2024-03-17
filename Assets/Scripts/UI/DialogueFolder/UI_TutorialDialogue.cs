@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class UI_TutorialDialogue 
@@ -9,5 +10,6 @@ public class UI_TutorialDialogue
 
     [TextArea(3,10)]
     public string[] sentences;
+    public Sprite[] tutorialImage;
 
 }
