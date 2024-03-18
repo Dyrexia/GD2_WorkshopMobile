@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,29 +9,24 @@ using UnityEngine.UI;
 public class Zombie_Away : MonoBehaviour
 {
     private ZombieData ActiveZombie;
-    //private void Start()
-    //{
-    //    GameObject.FindGameObjectWithTag("MissionStat").GetComponent<TextMeshProUGUI>().text= "Gnegnegne";//pour changer le texte d'un ui ATTENTION faut mettre le tag sur le texte directement
-    //}
-    private float NumberOfZombies(float t,float MilStr,int infection=0, int power = 0)
+    private TextMeshProUGUI MissionStats;
+    private void Start()
     {
-        return Mathf.Floor(Mathf.Sqrt(t) * infection - MilStr / power);
+        MissionStats = GameObject.FindGameObjectWithTag("MissionStat").GetComponent<TextMeshProUGUI>();//pour changer le texte d'un ui ATTENTION faut mettre le tag sur le texte directement
+        ShowZombieProgression();
     }
-    private float MilitaryStrength(float t,bool HaveArrived,float TimeOfArrival=0) 
+    private int NumberOfZombies(int t)
     {
-        if (HaveArrived)
-        {
-            return (t - TimeOfArrival) * (t - TimeOfArrival);
-        }
-        return 0f;
+        return Mathf.FloorToInt(15*Mathf.Sqrt(t)-Mathf.Pow(t,2)/10);
     }
+
     private void SetActiveZombie(int zombieID)
     {
         ActiveZombie = MainManager.Instance.PlayerData.zombieList[zombieID];
     }
-    private void ShowZombieProgression()
+    public void ShowZombieProgression()
     {
-        StartCoroutine(UpdateZombieProgression(1));
+        StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
     }
     private void HideZombieProgression()
     {
@@ -38,31 +34,18 @@ public class Zombie_Away : MonoBehaviour
     }
     public IEnumerator UpdateZombieProgression(int zombieID)
     {
-        double t = (ActiveZombie.GetExpectedReturn()-ActiveZombie.GetDepartureTime()).TotalSeconds;
-        if (t < 0f)
+        SetActiveZombie(zombieID);
+        //double TotalTime = (ActiveZombie.GetExpectedReturn()-ActiveZombie.GetDepartureTime()).TotalSeconds;
+        //double RemainingTime = (ActiveZombie.GetExpectedReturn()-DateTime.Now).TotalSeconds;
+        double TotalTime = 30;
+        double RemainingTime = 30;
+        while (RemainingTime > 0)
         {
-            //on fait revenir le zombie ici
+            MissionStats.text=NumberOfZombies((int)TotalTime-(int)RemainingTime).ToString();
+            //RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
+            RemainingTime--;
+            yield return new WaitForSeconds(1);
         }
-        else
-        {
-            int MissionDuration = 0;
-            int TimeOfArrival = 0;
-            bool HaveArrived = false;
-            while (t < MissionDuration)
-            {
-                t += 1;
-                if (t > TimeOfArrival)
-                {
-                    HaveArrived = true;
-                }
-                //Debug.Log("NZombies : " + NumberOfZombies(t, MilitaryStrength(t, HaveArrived)).ToString() + " Time : " + t.ToString());
-                yield return new WaitForSeconds(1);
-            }
-        }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
+        Debug.Log("ZombieHasReturned");
     }
 }
