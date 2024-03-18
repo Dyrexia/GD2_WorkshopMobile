@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-//using UnityEngine.UI;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class UI_DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI DialogueText;
-    //public Image ImageSpawn;
+    public Image ImageSpawn;
     private Queue<string> sentences;
-  //  private Queue<Sprite> ImageLié;
-    private float letterSpeed = 0.05f;
+    private Queue<Sprite> ImageLie;
+    private float letterSpeed = 0.02f;
    [SerializeField] private string currentPhrase;
    [SerializeField] private bool PhraseComplete;
     
@@ -22,7 +22,7 @@ public class UI_DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
-       // ImageLié = new Queue<Sprite>();
+        ImageLie = new Queue<Sprite>();
     }
 
     public void StartDialogue(UI_TutorialDialogue dialogueScript)
@@ -30,16 +30,16 @@ public class UI_DialogueManager : MonoBehaviour
         nameText.text = dialogueScript.nameOfNPC;
 
         sentences.Clear();
-       // ImageLié.Clear();
+        ImageLie.Clear();
 
         foreach (string Phrase in dialogueScript.sentences)
         {
             sentences.Enqueue(Phrase);
 
         }
-     //   foreach (Sprite image in dialogueScript.tutorialImage)
+        foreach (Sprite image in dialogueScript.tutorialImage)
         {
-      //      ImageLié.Enqueue(image);
+            ImageLie.Enqueue(image);
         }
         DisplayNextPhrase();
 
@@ -79,8 +79,8 @@ public class UI_DialogueManager : MonoBehaviour
         string Phrase = sentences.Dequeue();
         DialogueText.text = Phrase;
         currentPhrase = Phrase;
-       // Sprite Image = ImageLié.Dequeue();
-      //  ImageSpawn.sprite = Image;
+        Sprite Image = ImageLie.Dequeue();
+        ImageSpawn.sprite = Image;
 
         StopAllCoroutines();
         StartCoroutine(TypePhrase(Phrase, letterSpeed));
