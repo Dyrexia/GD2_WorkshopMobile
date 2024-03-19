@@ -18,8 +18,8 @@ public class Zombie_Send : MonoBehaviour
         {
             if (text.name == "StatDifficulte")
                 text.text = difficulty.ToString();
-            if (text.name=="StatDuree")
-                text.text = hours.ToString()+" heures";
+            if (text.name == "StatDuree")
+                text.text = Mathf.Floor((float)hours).ToString() + "h" + Mathf.Floor((float)hours / 60).ToString();
         }
     }
     public void SendZombie()//permet d'envoyer le zombie à la place "zombieID" de la liste pendant "hours" heures

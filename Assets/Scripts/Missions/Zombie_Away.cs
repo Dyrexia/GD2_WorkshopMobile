@@ -56,7 +56,7 @@ public class Zombie_Away : MonoBehaviour
         {
             t = (int)TotalTime - (int)RemainingTime;
             MissionStats.text=NumberOfZombies().ToString();
-            DurationStats.text=RemainingTime.ToString();
+            DurationStats.text=((int)RemainingTime/3600)+" : "+((int)(RemainingTime%3600)/60+" : "+((int)(RemainingTime%60)));
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
             yield return new WaitForSeconds(1);
         }
