@@ -17,9 +17,9 @@ public class Zombie_Send : MonoBehaviour
         foreach (var text in MissionDescription.GetComponentsInChildren<TextMeshProUGUI>())
         {
             if (text.name == "StatDifficulte")
-                text.text = difficulty.ToString();
+                text.text = (Mathf.Floor(difficulty*10)/10).ToString();
             if (text.name == "StatDuree")
-                text.text = Mathf.Floor((float)hours).ToString() + "h" + Mathf.Floor((float)hours / 60).ToString();
+                text.text = Mathf.Floor((float)hours).ToString() + "h" + Mathf.Floor((float)hours / 60).ToString()+'m';
         }
     }
     public void SendZombie()//permet d'envoyer le zombie à la place "zombieID" de la liste pendant "hours" heures
