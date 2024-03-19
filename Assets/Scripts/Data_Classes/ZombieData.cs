@@ -10,6 +10,7 @@ public class ZombieData//classe pour les données des zombies
     public bool IsAway;
     public long ExpectedReturn;
     public long DepartureTime;
+    public float MissionDifficulty;
     public SerializableDictionary<string, ItemData> EquippedParts = new SerializableDictionary<string, ItemData>();
 
     public string Name;
@@ -31,5 +32,41 @@ public class ZombieData//classe pour les données des zombies
     public DateTime GetDepartureTime() 
     {
         return DateTime.FromBinary(DepartureTime);
+    }
+    public int GetStealth()
+    {
+        int Stealth=0;
+        foreach (var item in EquippedParts)
+        {
+            Stealth += item.Value.Stealth;
+        }
+        return Mathf.Max(Stealth, 1);
+    }
+    public int GetPower()
+    {
+        int Power=0;
+        foreach(var item in EquippedParts) 
+        { 
+            Power += item.Value.Power; 
+        }
+        return Mathf.Max(Power,1);
+    }
+    public int GetInfection() 
+    { 
+        int Infection=0;
+        foreach( var item in EquippedParts) 
+        { 
+            Infection += item.Value.Infection; 
+        }
+        return Mathf.Max(Infection, 1);
+    }
+    public int GetIntelligence()
+    {
+        int Intelligence=0;
+        foreach(var item in EquippedParts)
+        {
+            Intelligence+= item.Value.Intelligence;
+        }
+        return Mathf.Max(Intelligence, 1);
     }
 }

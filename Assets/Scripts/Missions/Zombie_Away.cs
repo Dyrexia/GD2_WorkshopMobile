@@ -10,14 +10,27 @@ public class Zombie_Away : MonoBehaviour
 {
     private ZombieData ActiveZombie;
     private TextMeshProUGUI MissionStats;
+    private int t;
     private void Start()
     {
         MissionStats = GameObject.FindGameObjectWithTag("MissionStat").GetComponent<TextMeshProUGUI>();//pour changer le texte d'un ui ATTENTION faut mettre le tag sur le texte directement
         ShowZombieProgression();
     }
-    private int NumberOfZombies(int t)
+    private float MilitaryStrength()
     {
-        return Mathf.FloorToInt(15*Mathf.Sqrt(t)-Mathf.Pow(t,2)/10);
+        if (t < ActiveZombie.GetStealth())
+        {
+            return 0;
+        }
+        return Mathf.Pow(t-ActiveZombie.GetStealth(), 2+ActiveZombie.MissionDifficulty)/ActiveZombie.GetPower();
+    }
+    private float ZombieInfection()
+    {
+        return ActiveZombie.GetInfection() * Mathf.Sqrt(t);
+    }
+    private int NumberOfZombies()
+    {
+        return Mathf.FloorToInt(ZombieInfection()-MilitaryStrength());
     }
 
     private void SetActiveZombie(int zombieID)
@@ -41,11 +54,11 @@ public class Zombie_Away : MonoBehaviour
         double RemainingTime = 30;
         while (RemainingTime > 0)
         {
-            MissionStats.text=NumberOfZombies((int)TotalTime-(int)RemainingTime).ToString();
+            t = (int)TotalTime - (int)RemainingTime;
+            MissionStats.text=NumberOfZombies().ToString();
             //RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
             RemainingTime--;
             yield return new WaitForSeconds(1);
         }
-        Debug.Log("ZombieHasReturned");
     }
 }
