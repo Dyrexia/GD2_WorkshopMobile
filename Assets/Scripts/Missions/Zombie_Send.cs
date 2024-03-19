@@ -14,6 +14,13 @@ public class Zombie_Send : MonoBehaviour
     {
         difficulty=UnityEngine.Random.value*3+LevelClass*3;
         hours = UnityEngine.Random.value*3+LevelClass*3+1;
+        foreach (var text in MissionDescription.GetComponentsInChildren<TextMeshProUGUI>())
+        {
+            if (text.name == "StatDifficulte")
+                text.text = difficulty.ToString();
+            if (text.name=="StatDuree")
+                text.text = hours.ToString()+" heures";
+        }
     }
     public void SendZombie()//permet d'envoyer le zombie à la place "zombieID" de la liste pendant "hours" heures
     {
