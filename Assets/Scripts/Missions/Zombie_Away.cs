@@ -46,6 +46,7 @@ public class Zombie_Away : MonoBehaviour
     private void HideZombieProgression()
     {
         StopCoroutine("UpdateZombieProgression");
+        ActiveZombie.IsAway = false;
     }
     public IEnumerator UpdateZombieProgression(int zombieID)
     {
@@ -55,8 +56,14 @@ public class Zombie_Away : MonoBehaviour
         while (RemainingTime > 0)
         {
             t = (int)TotalTime - (int)RemainingTime;
+            if (NumberOfZombies() <= 0) 
+            {
+                MissionStats.text = 0.ToString();
+                HideZombieProgression();
+                break;
+            }
             MissionStats.text=NumberOfZombies().ToString();
-            DurationStats.text=((int)RemainingTime/3600)+" : "+((int)(RemainingTime%3600)/60+" : "+((int)(RemainingTime%60)));
+            DurationStats.text=((int)RemainingTime/3600)+"h"+((int)(RemainingTime%3600)/60+"m"+((int)(RemainingTime%60))+"s");
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
             yield return new WaitForSeconds(1);
         }
