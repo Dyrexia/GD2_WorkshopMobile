@@ -34,11 +34,16 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 3785458292188901246, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: -2863590402548021541, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_Sprite: {fileID: 2938844345456210135, guid: d05eee36263508840901f05e92dc56c2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2863590402548021541, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_SpriteOverride: {fileID: 2938844345456210135, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 6068601853704031650, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6068601853704031650, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 5
   - m_Name: Bras droit
     m_Hash: 749038417
     m_CategoryList: []
@@ -60,11 +65,16 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -6834699632829212545, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 7388351885363871409, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_Sprite: {fileID: -2516506830944126421, guid: d05eee36263508840901f05e92dc56c2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7388351885363871409, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_SpriteOverride: {fileID: -2516506830944126421, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: -4296311389459329100, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4296311389459329100, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 5
   - m_Name: "T\xEAte"
     m_Hash: 221064813
     m_CategoryList: []
@@ -86,11 +96,16 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 6303744889461019980, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 7524707430684713046, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_Sprite: {fileID: 3193295061916170857, guid: d05eee36263508840901f05e92dc56c2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7524707430684713046, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_SpriteOverride: {fileID: 3193295061916170857, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 1458567529152571475, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1458567529152571475, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 5
   - m_Name: Torse
     m_Hash: 105609887
     m_CategoryList: []
@@ -112,11 +127,16 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -2069402098571058944, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: -3975268637041683331, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_Sprite: {fileID: 5380196560846147005, guid: d05eee36263508840901f05e92dc56c2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3975268637041683331, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_SpriteOverride: {fileID: 5380196560846147005, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 9023240572317839193, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 9023240572317839193, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 5
   - m_Name: Jambe droite
     m_Hash: 861839771
     m_CategoryList: []
@@ -138,11 +158,16 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -3177620524900941983, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 7306070985530729361, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_Sprite: {fileID: -322154692216408534, guid: d05eee36263508840901f05e92dc56c2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 7306070985530729361, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_SpriteOverride: {fileID: -322154692216408534, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 6703152655913123329, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6703152655913123329, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 5
   - m_Name: Jambe gauche
     m_Hash: 114184471
     m_CategoryList: []
@@ -164,11 +189,16 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -3682389184244684813, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 743719169223993432, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_Sprite: {fileID: 5192773850346510617, guid: d05eee36263508840901f05e92dc56c2, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 743719169223993432, guid: 7d5ccba508abfe1488f9c4793b816eef, type: 3}
+      m_SpriteOverride: {fileID: 5192773850346510617, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 6877217382543861017, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6877217382543861017, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 5
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638459360710531776
+  m_ModificationHash: 638464693000772064
   m_Version: 1

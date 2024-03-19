@@ -10,7 +10,7 @@ public class Zombie_Send : MonoBehaviour
     private double hours = 0;
     private float difficulty = 0;
     public int LevelClass = 0;
-    private void Awake()
+    private void Start()
     {
         difficulty=UnityEngine.Random.value*3+LevelClass*3;
         hours = UnityEngine.Random.value*3+LevelClass*3+1;
@@ -19,11 +19,12 @@ public class Zombie_Send : MonoBehaviour
             if (text.name == "StatDifficulte")
                 text.text = (Mathf.Floor(difficulty*10)/10).ToString();
             if (text.name == "StatDuree")
-                text.text = Mathf.Floor((float)hours).ToString() + "h" + Mathf.Floor((float)hours / 60).ToString()+'m';
+                text.text = Mathf.Floor((float)hours).ToString() + "h" + Mathf.Floor(((float)hours- Mathf.Floor((float)hours)) * 60).ToString()+'m';
         }
     }
     public void SendZombie()//permet d'envoyer le zombie à la place "zombieID" de la liste pendant "hours" heures
     {
+        Debug.Log("gesd");
         if (MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].IsAway == false)
         {
             MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].ExpectedReturn = DateTime.Now.AddHours(hours).ToBinary();

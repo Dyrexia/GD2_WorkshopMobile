@@ -17,6 +17,8 @@ TagManager:
   - FirgoJambe droite
   - ImageItemInventaire
   - Zombie
+  - MissionStat
+  - DurationStat
   layers:
   - Default
   - TransparentFX
