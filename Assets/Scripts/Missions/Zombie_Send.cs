@@ -10,10 +10,12 @@ public class Zombie_Send : MonoBehaviour
     private double hours = 0;
     private float difficulty = 0;
     public int LevelClass = 0;
-    private void Start()
+    private void OnEnable()
     {
         difficulty=UnityEngine.Random.value*3+LevelClass*3;
         hours = UnityEngine.Random.value*3+LevelClass*3+1;
+        if (LevelClass == 0)
+            hours = 5f / 60f;
         foreach (var text in MissionDescription.GetComponentsInChildren<TextMeshProUGUI>())
         {
             if (text.name == "StatDifficulte")

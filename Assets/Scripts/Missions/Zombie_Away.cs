@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,9 @@ public class Zombie_Away : MonoBehaviour
     {
         MissionStats = GameObject.FindGameObjectWithTag("MissionStat").GetComponent<TextMeshProUGUI>();//pour changer le texte d'un ui ATTENTION faut mettre le tag sur le texte directement
         DurationStats = GameObject.FindGameObjectWithTag("DurationStat").GetComponent<TextMeshProUGUI>();
+    }
+    private void OnEnable()
+    {
         ShowZombieProgression();
     }
     private float MilitaryStrength()
@@ -41,7 +45,9 @@ public class Zombie_Away : MonoBehaviour
     }
     public void ShowZombieProgression()
     {
+        if (MainManager.Instance != null)
         StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
+        Debug.Log("Gnegnegne");
     }
     private void HideZombieProgression()
     {
