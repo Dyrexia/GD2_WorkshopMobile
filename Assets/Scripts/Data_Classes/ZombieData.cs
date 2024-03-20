@@ -33,6 +33,15 @@ public class ZombieData//classe pour les données des zombies
     {
         return DateTime.FromBinary(DepartureTime);
     }
+    public int GetLevel()
+    {
+        int Level = 0;
+        foreach (var item in EquippedParts)
+        {
+            Level += item.Value.Level;
+        }
+        return Mathf.Max(Level, 1);
+    }
     public int GetStealth()
     {
         int Stealth=0;
