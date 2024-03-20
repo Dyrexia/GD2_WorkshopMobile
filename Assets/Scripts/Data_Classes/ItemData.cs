@@ -34,12 +34,12 @@ public class ItemData//classe pour tout les données des items
     public int Stealth;//max = 60
     public int Durability = 100;
     public int FermentationModifier=0;
-    public ItemData(string bodypart, int level = 0, string skin = "Basique")//constructeur de la classe : seule la bodypart et le level sont importants, le reste est généré aléatoirement à partir de ces 2 infos
+    public ItemData(string bodypart, int level = 0)//constructeur de la classe : seule la bodypart et le level sont importants, le reste est généré aléatoirement à partir de ces 2 infos
     {
         Bodypart = bodypart;
         Level = level;
         SkinLabel = GetSkin(level);
-        Description = DescriptionHolder.GetDescription(Bodypart, skin);
+        Description = DescriptionHolder.GetDescription(Bodypart, SkinLabel);
         IsInBarrel = false;
         Name = Bodypart + NameChar[level/5];
         GenerateRandomModifier();
