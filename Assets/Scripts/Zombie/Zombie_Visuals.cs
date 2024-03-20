@@ -13,7 +13,7 @@ public class Zombie_Visuals : MonoBehaviour
         }
         
     }
-    private void Start()
+    private void OnEnable()
     {
         UpdateZombieSkin();
     }
