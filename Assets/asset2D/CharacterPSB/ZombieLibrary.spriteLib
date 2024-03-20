@@ -24,9 +24,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -3208983838722132934, guid: 03cde5583180f654497355d08d92bea0, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
-      m_Sprite: {fileID: 6629266221496256272, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_Sprite: {fileID: 1707672817916061967, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6629266221496256272, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_SpriteOverride: {fileID: 1707672817916061967, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
     - m_Name: Popstar
       m_Hash: 374795905
       m_Sprite: {fileID: 3785458292188901246, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
@@ -34,14 +34,14 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 3785458292188901246, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 2938844345456210135, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_Sprite: {fileID: -1192935897994294581, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 2938844345456210135, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_SpriteOverride: {fileID: -1192935897994294581, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
     - m_Name: Basique
       m_Hash: 263151428
-      m_Sprite: {fileID: 6068601853704031650, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_Sprite: {fileID: 8836916781836166737, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6068601853704031650, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_SpriteOverride: {fileID: 8836916781836166737, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 5
   - m_Name: Bras droit
@@ -55,9 +55,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -1070845143552299946, guid: 03cde5583180f654497355d08d92bea0, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
-      m_Sprite: {fileID: 3884140925455083814, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_Sprite: {fileID: -6699229367844740024, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 3884140925455083814, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_SpriteOverride: {fileID: -6699229367844740024, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
     - m_Name: Popstar
       m_Hash: 374795905
       m_Sprite: {fileID: -6834699632829212545, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
@@ -65,14 +65,14 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -6834699632829212545, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: -2516506830944126421, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_Sprite: {fileID: 8250712866998977590, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -2516506830944126421, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_SpriteOverride: {fileID: 8250712866998977590, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
     - m_Name: Basique
       m_Hash: 263151428
-      m_Sprite: {fileID: -4296311389459329100, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_Sprite: {fileID: -3686323059412352332, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -4296311389459329100, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_SpriteOverride: {fileID: -3686323059412352332, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 5
   - m_Name: "T\xEAte"
@@ -86,9 +86,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -9198951722965722270, guid: 03cde5583180f654497355d08d92bea0, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
-      m_Sprite: {fileID: 5541859268122950868, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_Sprite: {fileID: 4528747018411780004, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 5541859268122950868, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_SpriteOverride: {fileID: 4528747018411780004, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
     - m_Name: Popstar
       m_Hash: 374795905
       m_Sprite: {fileID: 6303744889461019980, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
@@ -96,14 +96,14 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 6303744889461019980, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 3193295061916170857, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_Sprite: {fileID: -3267942474857306263, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 3193295061916170857, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_SpriteOverride: {fileID: -3267942474857306263, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
     - m_Name: Basique
       m_Hash: 263151428
-      m_Sprite: {fileID: 1458567529152571475, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_Sprite: {fileID: -6344752521731422645, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1458567529152571475, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_SpriteOverride: {fileID: -6344752521731422645, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 5
   - m_Name: Torse
@@ -117,9 +117,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -3844555987764801185, guid: 03cde5583180f654497355d08d92bea0, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
-      m_Sprite: {fileID: -3409679506297530517, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_Sprite: {fileID: -7982470299662536059, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3409679506297530517, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_SpriteOverride: {fileID: -7982470299662536059, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
     - m_Name: Popstar
       m_Hash: 374795905
       m_Sprite: {fileID: -2069402098571058944, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
@@ -127,14 +127,14 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -2069402098571058944, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 5380196560846147005, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_Sprite: {fileID: 7038670378921871858, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 5380196560846147005, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_SpriteOverride: {fileID: 7038670378921871858, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
     - m_Name: Basique
       m_Hash: 263151428
-      m_Sprite: {fileID: 9023240572317839193, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_Sprite: {fileID: -2708239309886304621, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 9023240572317839193, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_SpriteOverride: {fileID: -2708239309886304621, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 5
   - m_Name: Jambe droite
@@ -148,9 +148,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 8772847659656940449, guid: 03cde5583180f654497355d08d92bea0, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
-      m_Sprite: {fileID: -5652533443653377081, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_Sprite: {fileID: -5512626283396333922, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -5652533443653377081, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_SpriteOverride: {fileID: -5512626283396333922, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
     - m_Name: Popstar
       m_Hash: 374795905
       m_Sprite: {fileID: -3177620524900941983, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
@@ -158,14 +158,14 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -3177620524900941983, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: -322154692216408534, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_Sprite: {fileID: 3222833972344892692, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -322154692216408534, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_SpriteOverride: {fileID: 3222833972344892692, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
     - m_Name: Basique
       m_Hash: 263151428
-      m_Sprite: {fileID: 6703152655913123329, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_Sprite: {fileID: 7253791715208911307, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6703152655913123329, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_SpriteOverride: {fileID: 7253791715208911307, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 5
   - m_Name: Jambe gauche
@@ -179,9 +179,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -4324653540521092716, guid: 03cde5583180f654497355d08d92bea0, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
-      m_Sprite: {fileID: 2610225227025897469, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_Sprite: {fileID: 734101102806348762, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 2610225227025897469, guid: 65f5fdb9ec9f9794e86d5cfd9e63305b, type: 3}
+      m_SpriteOverride: {fileID: 734101102806348762, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
     - m_Name: Popstar
       m_Hash: 374795905
       m_Sprite: {fileID: -3682389184244684813, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
@@ -189,16 +189,16 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -3682389184244684813, guid: 517bf5e8d15c73b41bb377d6ba37f496, type: 3}
     - m_Name: Rastafara
       m_Hash: 1063863701
-      m_Sprite: {fileID: 5192773850346510617, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_Sprite: {fileID: 231767866123521138, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 5192773850346510617, guid: d05eee36263508840901f05e92dc56c2, type: 3}
+      m_SpriteOverride: {fileID: 231767866123521138, guid: da78e98d1b8950f458894fbadc88c73b, type: 3}
     - m_Name: Basique
       m_Hash: 263151428
-      m_Sprite: {fileID: 6877217382543861017, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_Sprite: {fileID: -3708935732829539734, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 6877217382543861017, guid: 0808b9dc63ddf904297c3372f43441a2, type: 3}
+      m_SpriteOverride: {fileID: -3708935732829539734, guid: 4c31153da1b22ba489d38fbd1a30e978, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 5
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638464693000772064
+  m_ModificationHash: 638465444879085356
   m_Version: 1
