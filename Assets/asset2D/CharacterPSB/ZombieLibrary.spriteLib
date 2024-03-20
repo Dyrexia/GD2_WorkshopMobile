@@ -19,9 +19,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Feminin
       m_Hash: 427716666
-      m_Sprite: {fileID: -3208983838722132934, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_Sprite: {fileID: -8390579750131549451, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3208983838722132934, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_SpriteOverride: {fileID: -8390579750131549451, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
       m_Sprite: {fileID: 1707672817916061967, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
@@ -50,9 +50,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Feminin
       m_Hash: 427716666
-      m_Sprite: {fileID: -1070845143552299946, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_Sprite: {fileID: -3075454854156439143, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -1070845143552299946, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_SpriteOverride: {fileID: -3075454854156439143, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
       m_Sprite: {fileID: -6699229367844740024, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
@@ -81,9 +81,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Feminin
       m_Hash: 427716666
-      m_Sprite: {fileID: -9198951722965722270, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_Sprite: {fileID: 8706498770429347613, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -9198951722965722270, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_SpriteOverride: {fileID: 8706498770429347613, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
       m_Sprite: {fileID: 4528747018411780004, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
@@ -112,9 +112,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Feminin
       m_Hash: 427716666
-      m_Sprite: {fileID: -3844555987764801185, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_Sprite: {fileID: -5395970800106511414, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -3844555987764801185, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_SpriteOverride: {fileID: -5395970800106511414, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
       m_Sprite: {fileID: -7982470299662536059, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
@@ -143,9 +143,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Feminin
       m_Hash: 427716666
-      m_Sprite: {fileID: 8772847659656940449, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_Sprite: {fileID: -2293184515415330893, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 8772847659656940449, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_SpriteOverride: {fileID: -2293184515415330893, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
       m_Sprite: {fileID: -5512626283396333922, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
@@ -174,9 +174,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Feminin
       m_Hash: 427716666
-      m_Sprite: {fileID: -4324653540521092716, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_Sprite: {fileID: -604216047517290181, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -4324653540521092716, guid: 03cde5583180f654497355d08d92bea0, type: 3}
+      m_SpriteOverride: {fileID: -604216047517290181, guid: 1ea2ad775ada4914e94040c37daffbaf, type: 3}
     - m_Name: Gangster
       m_Hash: 1050990263
       m_Sprite: {fileID: 734101102806348762, guid: bbef4d5a5153fef48846c6ebc2e90baf, type: 3}
@@ -200,5 +200,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 5
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638465444879085356
+  m_ModificationHash: 638465466708463439
   m_Version: 1
