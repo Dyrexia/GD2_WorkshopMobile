@@ -13,9 +13,16 @@ public class Zombie_Return : MonoBehaviour
         int items = MissionDuration.Hour + 1;
         for (int i = 0; i < items; i++)
         {
-            int levelModifier = (Zombie.GetIntelligence() / 6) + UnityEngine.Random.Range(-1, 2)+(int)MathF.Round(Zombie.MissionDifficulty);
-            MissionGains.Add(new ItemData(bodyparts[UnityEngine.Random.Range(0,bodyparts.Length)],levelModifier));
+            int levelModifier = (Zombie.GetIntelligence() / 6) + UnityEngine.Random.Range(-1, 2)+(int)MathF.Round(Zombie.MissionDifficulty)/2;
+            MissionGains.Add(new ItemData(bodyparts[UnityEngine.Random.Range(0,bodyparts.Length)],Mathf.Min(levelModifier,15)));
         }
+        foreach (ItemData item in MissionGains)
+        {
+            ItemWrapper itemWrapper = new ItemWrapper();
+            itemWrapper.ItemData = item;
+            MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Add(itemWrapper);
+        }
+        MissionGains.Clear();
     }
     public int MissionEndStats(int t)
     {
