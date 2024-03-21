@@ -8,19 +8,13 @@ public class UI_ProgressBarStat : MonoBehaviour
     private Slider SliderRef;
     
 
-    private void Start() 
+    private void OnEnable() 
     {
         SliderRef= GetComponent<Slider>();
     }
     public void UpdateNumber(float NewValue, Color color)
     {
         SliderRef.value = NewValue;
-        gameObject.GetComponentInChildren<Image>().color = color;
-
-
-        
+        gameObject.GetComponentInChildren<Image>().color = color;  
     }
-    
-
-
 }

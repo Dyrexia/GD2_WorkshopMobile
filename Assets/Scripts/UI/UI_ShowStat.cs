@@ -26,9 +26,13 @@ public class UI_ShowStat : MonoBehaviour
     public ItemData OldItemRef;
     public string bodypart;
     public UnityEngine.UI.Image ImageNewItem;
-    
-   
-   
+
+    private void OnEnable()
+    {
+        OldItemRef = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[bodypart];
+        NewStatsChangement(MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].EquippedParts[bodypart]);
+    }
+
     private int NombreDeBouton;
     public void NewStatsChangement(ItemData Item)
     {
