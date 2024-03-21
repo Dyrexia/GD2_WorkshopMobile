@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: "T\xEAte"
+    m_Hash: 221064813
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 21300000, guid: 24277069faafdbc419ba8141037c9eac, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 24277069faafdbc419ba8141037c9eac, type: 3}
+    - m_Name: Feminin
+      m_Hash: 427716666
+      m_Sprite: {fileID: 21300000, guid: 328c1f20694f7d34aa226538215fd31b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 328c1f20694f7d34aa226538215fd31b, type: 3}
+    - m_Name: Gangster
+      m_Hash: 1050990263
+      m_Sprite: {fileID: 21300000, guid: 6a398096a1d7e724d8baa1d26ed09765, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6a398096a1d7e724d8baa1d26ed09765, type: 3}
+    - m_Name: Popstar
+      m_Hash: 374795905
+      m_Sprite: {fileID: 21300000, guid: 63fcb3adf7eddfe43b1d69c75ae91b0e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 63fcb3adf7eddfe43b1d69c75ae91b0e, type: 3}
+    - m_Name: Rastafara
+      m_Hash: 1063863701
+      m_Sprite: {fileID: 21300000, guid: f07bca9fdf6b0944f898d050b29ac5e8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f07bca9fdf6b0944f898d050b29ac5e8, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: Torse
+    m_Hash: 105609887
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 21300000, guid: 16af76cfcc36f3343a24788e87286b51, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 16af76cfcc36f3343a24788e87286b51, type: 3}
+    - m_Name: Feminin
+      m_Hash: 427716666
+      m_Sprite: {fileID: 21300000, guid: 1dab68f9de324a54ebaa91e6825ca935, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 1dab68f9de324a54ebaa91e6825ca935, type: 3}
+    - m_Name: Gangster
+      m_Hash: 1050990263
+      m_Sprite: {fileID: 21300000, guid: 0b67352e901bf29458515ce1dd1200ba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 0b67352e901bf29458515ce1dd1200ba, type: 3}
+    - m_Name: Popstar
+      m_Hash: 374795905
+      m_Sprite: {fileID: 21300000, guid: 0c52817215bd84249ad4c600c04dcc32, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 0c52817215bd84249ad4c600c04dcc32, type: 3}
+    - m_Name: Rastafara
+      m_Hash: 1063863701
+      m_Sprite: {fileID: 21300000, guid: 5c7316e3d411b504d98adf2aabd8fc8d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 5c7316e3d411b504d98adf2aabd8fc8d, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: Bras droit
+    m_Hash: 749038417
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 21300000, guid: 7719035a34299eb47a19e66db3dcb706, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7719035a34299eb47a19e66db3dcb706, type: 3}
+    - m_Name: Feminin
+      m_Hash: 427716666
+      m_Sprite: {fileID: 21300000, guid: 37ebd81cb8b11c842b689a8efac26289, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 37ebd81cb8b11c842b689a8efac26289, type: 3}
+    - m_Name: Gangster
+      m_Hash: 1050990263
+      m_Sprite: {fileID: 21300000, guid: cfc605c8dfbdd0941b30f54a808e2255, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: cfc605c8dfbdd0941b30f54a808e2255, type: 3}
+    - m_Name: Popstar
+      m_Hash: 374795905
+      m_Sprite: {fileID: 21300000, guid: 778c6f955fd681646ab5573ae2a7e8da, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 778c6f955fd681646ab5573ae2a7e8da, type: 3}
+    - m_Name: Rastafara
+      m_Hash: 1063863701
+      m_Sprite: {fileID: 21300000, guid: 30f8a2d104268a0498337fc23f8b93c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 30f8a2d104268a0498337fc23f8b93c1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: Bras gauche
+    m_Hash: 105533151
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 21300000, guid: ca74598dd05ca4047ae1712261c61355, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ca74598dd05ca4047ae1712261c61355, type: 3}
+    - m_Name: Feminin
+      m_Hash: 427716666
+      m_Sprite: {fileID: 0}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 0}
+    - m_Name: Gangster
+      m_Hash: 1050990263
+      m_Sprite: {fileID: 21300000, guid: 4f433f36d644a7846bf8f4cc0a1298df, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 4f433f36d644a7846bf8f4cc0a1298df, type: 3}
+    - m_Name: Popstar
+      m_Hash: 374795905
+      m_Sprite: {fileID: 21300000, guid: 31dd99298b4e49d40a45649dff7d7a63, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 31dd99298b4e49d40a45649dff7d7a63, type: 3}
+    - m_Name: Rastafara
+      m_Hash: 1063863701
+      m_Sprite: {fileID: 21300000, guid: a4eb095e9ba5fb64db822143f3bb31f5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: a4eb095e9ba5fb64db822143f3bb31f5, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: Jambe droite
+    m_Hash: 861839771
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 21300000, guid: f9437296730eeaf469ce23f37b83f16b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f9437296730eeaf469ce23f37b83f16b, type: 3}
+    - m_Name: Feminin
+      m_Hash: 427716666
+      m_Sprite: {fileID: 21300000, guid: 891956d2e989ec641a2f71d5cd77b80b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 891956d2e989ec641a2f71d5cd77b80b, type: 3}
+    - m_Name: Gangster
+      m_Hash: 1050990263
+      m_Sprite: {fileID: 21300000, guid: 0edfbdee8272632479329f2a366881fd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 0edfbdee8272632479329f2a366881fd, type: 3}
+    - m_Name: Popstar
+      m_Hash: 374795905
+      m_Sprite: {fileID: 21300000, guid: 51d54619c427a6449bf422ada6b83b24, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 51d54619c427a6449bf422ada6b83b24, type: 3}
+    - m_Name: Rastafara
+      m_Hash: 1063863701
+      m_Sprite: {fileID: 21300000, guid: fed939a62a4d9d94e9df3d49f95ac101, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: fed939a62a4d9d94e9df3d49f95ac101, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  - m_Name: Jambe gauche
+    m_Hash: 114184471
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Basique
+      m_Hash: 263151428
+      m_Sprite: {fileID: 21300000, guid: 5e99d51f5e46fa44c96b43330fb721f1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 5e99d51f5e46fa44c96b43330fb721f1, type: 3}
+    - m_Name: Feminin
+      m_Hash: 427716666
+      m_Sprite: {fileID: 21300000, guid: 09b5edbd3ade8ca4393ceec41dfd40c9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 09b5edbd3ade8ca4393ceec41dfd40c9, type: 3}
+    - m_Name: Gangster
+      m_Hash: 1050990263
+      m_Sprite: {fileID: 21300000, guid: acc19f670831b904e94671d55e7ed7b8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: acc19f670831b904e94671d55e7ed7b8, type: 3}
+    - m_Name: Popstar
+      m_Hash: 374795905
+      m_Sprite: {fileID: 21300000, guid: fc5f8200526a0d149a7657b5dd002134, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: fc5f8200526a0d149a7657b5dd002134, type: 3}
+    - m_Name: Rastafara
+      m_Hash: 1063863701
+      m_Sprite: {fileID: 21300000, guid: ef92c0da2da32094b841978b8fe808d3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ef92c0da2da32094b841978b8fe808d3, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 5
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638466051879342219
+  m_Version: 1
