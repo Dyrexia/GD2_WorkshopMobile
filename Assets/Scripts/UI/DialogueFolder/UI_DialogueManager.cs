@@ -35,6 +35,7 @@ public class UI_DialogueManager : MonoBehaviour
         foreach (string Phrase in dialogueScript.sentences)
         {
             sentences.Enqueue(Phrase);
+            Debug.Log(Phrase);
 
         }
         foreach (Sprite image in dialogueScript.tutorialImage)
