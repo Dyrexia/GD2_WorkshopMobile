@@ -5,7 +5,8 @@ using UnityEngine.U2D.Animation;
 
 public class Zombie_Visuals : MonoBehaviour
 {
-    public void UpdateZombieSkin()
+    public UI_HideShow StatsCanvas;
+    private void UpdateZombieSkin()
     {
         foreach (SpriteResolver resolver in GetComponentsInChildren<SpriteResolver>())
         {
@@ -15,6 +16,18 @@ public class Zombie_Visuals : MonoBehaviour
     }
     private void OnEnable()
     {
+        UpdateScreen();
+    }
+    public void UpdateScreen()
+    {
+        if (MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].IsAway==true)
+        {
+            StatsCanvas.ShowCanvas();
+        }
+        else
+        {
+            StatsCanvas.HideCanvas();
+        }
         UpdateZombieSkin();
     }
 }

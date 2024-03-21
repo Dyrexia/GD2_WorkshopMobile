@@ -10,14 +10,9 @@ using UnityEngine.UI;
 public class Zombie_Away : MonoBehaviour
 {
     private ZombieData ActiveZombie;
-    private TextMeshProUGUI MissionStats;
-    private TextMeshProUGUI DurationStats;
+    public TextMeshProUGUI MissionStats;
+    public TextMeshProUGUI DurationStats;
     private int t;
-    private void Start()
-    {
-        MissionStats = GameObject.FindGameObjectWithTag("MissionStat").GetComponent<TextMeshProUGUI>();//pour changer le texte d'un ui ATTENTION faut mettre le tag sur le texte directement
-        DurationStats = GameObject.FindGameObjectWithTag("DurationStat").GetComponent<TextMeshProUGUI>();
-    }
     private void OnEnable()
     {
         ShowZombieProgression();
@@ -69,9 +64,11 @@ public class Zombie_Away : MonoBehaviour
                 break;
             }
             MissionStats.text=NumberOfZombies().ToString();
+            Debug.Log("kasKouil");
             DurationStats.text=((int)RemainingTime/3600)+"h"+((int)(RemainingTime%3600)/60+"m"+((int)(RemainingTime%60))+"s");
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
             yield return new WaitForSeconds(1);
         }
+        HideZombieProgression();//FIN DE PARTIE
     }
 }

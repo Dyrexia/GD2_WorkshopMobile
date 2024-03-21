@@ -33,9 +33,9 @@ public class Zombie_Send : MonoBehaviour
     }
     public void SendZombie()//permet d'envoyer le zombie à la place "zombieID" de la liste pendant "hours" heures
     {
-        Debug.Log("gesd");
         if (MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].IsAway == false)
         {
+            Debug.Log("gesd");
             MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].ExpectedReturn = DateTime.Now.AddHours(Mission.hours).ToBinary();
             MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].DepartureTime = DateTime.Now.ToBinary();
             MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].IsAway = true;

@@ -24,6 +24,6 @@ public class UI_ChangeCurrentZombie : MonoBehaviour
     }
     private void UpdateZombie()
     {
-        GameObject.FindGameObjectWithTag("Zombie").GetComponent<Zombie_Visuals>().UpdateZombieSkin();
+        GameObject.FindGameObjectWithTag("Zombie").GetComponent<Zombie_Visuals>().UpdateScreen();
     }
 }
