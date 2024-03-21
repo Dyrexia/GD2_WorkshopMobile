@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         audiosource = GetComponent<AudioSource>();
+        playsound(0);
     }
 
     // Update is called once per frame
