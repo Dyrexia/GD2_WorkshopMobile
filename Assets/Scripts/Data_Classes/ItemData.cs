@@ -110,17 +110,17 @@ public static class DescriptionHolder
                 switch (part)
                 {
                     case "Tête":
-                        return "dépourvue de toute élégance, est l'accessoire parfait pour les zombies qui veulent séduire mais qui finissent par ressembler à une caricature de mannequin défilant sur un catwalk de l'horreur.";
+                        return "Dépourvue de toute élégance, est l'accessoire parfait pour les zombies qui veulent séduire mais qui finissent par ressembler à une caricature de mannequin défilant sur un catwalk de l'horreur.";
                     case "Torse":
-                        return "les zombies qui veulent séduire mais qui finissent par ressembler à un mannequin de vitrine mal habillé.";
+                        return "Les zombies qui veulent séduire mais qui finissent par ressembler à un mannequin de vitrine mal habillé.";
                     case "Bras droit":
-                        return "une sorcière maladroite, avec des ongles vernis qui semblent avoir survécu à une bataille de nail art.";
+                        return "Une sorcière maladroite, avec des ongles vernis qui semblent avoir survécu à une bataille de nail art.";
                     case "Bras gauche":
-                        return "une sorcière maladroite, avec des ongles vernis qui semblent avoir survécu à une bataille de nail art.";
+                        return "Une sorcière maladroite, avec des ongles vernis qui semblent avoir survécu à une bataille de nail art.";
                     case "Jambe droite":
-                        return "une danseuse fatiguée après une soirée en talons aiguilles";
+                        return "Une danseuse fatiguée après une soirée en talons aiguilles";
                     case "Jambe gauche":
-                        return "une danseuse fatiguée après une soirée en talons aiguilles";
+                        return "Une danseuse fatiguée après une soirée en talons aiguilles";
                 }
                 break;
             case "Gangster":
@@ -144,9 +144,9 @@ public static class DescriptionHolder
                 switch (part)
                 {
                     case "Tête":
-                        return "une coiffure plus sauvage que vos soirées les plus folles! La stone attitude";
+                        return "Une coiffure plus sauvage que vos soirées les plus folles! La stone attitude";
                     case "Torse":
-                        return "plus décontracté que votre jour de congé!";
+                        return "Plus décontracté que votre jour de congé!";
                     case "Bras droit":
                         return "Ce bras vous raconteras au travers de ses tatouages, des histoires qui vous feront voyager à travers le cosmos.";
                     case "Bras gauche":
