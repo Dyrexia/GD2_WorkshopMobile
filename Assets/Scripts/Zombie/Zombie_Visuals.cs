@@ -14,8 +14,13 @@ public class Zombie_Visuals : MonoBehaviour
         }
         
     }
+    private void Start()
+    {
+        UpdateScreen();
+    }
     private void OnEnable()
     {
+        if (MainManager.Instance.PlayerData.zombieList.Count != 0)
         UpdateScreen();
     }
     public void UpdateScreen()

@@ -54,6 +54,7 @@ public class Zombie_Away : MonoBehaviour
         SetActiveZombie(zombieID);
         double TotalTime = (ActiveZombie.GetExpectedReturn()-ActiveZombie.GetDepartureTime()).TotalSeconds;
         double RemainingTime = (ActiveZombie.GetExpectedReturn()-DateTime.Now).TotalSeconds;
+        Debug.Log("jhg");
         while (RemainingTime > 0)
         {
             t = (int)TotalTime - (int)RemainingTime;
@@ -67,7 +68,7 @@ public class Zombie_Away : MonoBehaviour
             Debug.Log("kasKouil");
             DurationStats.text=((int)RemainingTime/3600)+"h"+((int)(RemainingTime%3600)/60+"m"+((int)(RemainingTime%60))+"s");
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
-            if (RemainingTime <= 0)
+            if (RemainingTime <= 1)
             {
                 HideZombieProgression();//FIN DE PARTIE
             }
