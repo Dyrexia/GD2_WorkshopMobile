@@ -15,7 +15,12 @@ public class Zombie_Away : MonoBehaviour
     private int t;
     private void OnEnable()
     {
-        ShowZombieProgression();
+        if (MainManager.Instance != null)
+            ShowZombieProgression();
+    }
+    private void OnDisable()
+    {
+        HideZombieProgression();
     }
     private float MilitaryStrength()
     {
@@ -31,7 +36,7 @@ public class Zombie_Away : MonoBehaviour
     }
     private int NumberOfZombies()
     {
-        return Mathf.FloorToInt(ZombieInfection()-MilitaryStrength());
+        return Mathf.FloorToInt(1+ZombieInfection()-MilitaryStrength());
     }
 
     private void SetActiveZombie(int zombieID)
@@ -40,39 +45,48 @@ public class Zombie_Away : MonoBehaviour
     }
     public void ShowZombieProgression()
     {
-        if (MainManager.Instance != null)
-        StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
-        Debug.Log("Gnegnegne");
+        if (MainManager.Instance.PlayerData.zombieList.Count != 0)
+        {
+            StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
+        }
+        
+        
     }
     private void HideZombieProgression()
     {
         StopCoroutine("UpdateZombieProgression");
-        ActiveZombie.IsAway = false;
+        GetComponent<UI_HideShow>().HideCanvas();
     }
     public IEnumerator UpdateZombieProgression(int zombieID)
     {
         SetActiveZombie(zombieID);
         double TotalTime = (ActiveZombie.GetExpectedReturn()-ActiveZombie.GetDepartureTime()).TotalSeconds;
         double RemainingTime = (ActiveZombie.GetExpectedReturn()-DateTime.Now).TotalSeconds;
-        Debug.Log("jhg");
-        while (RemainingTime > 0)
+        Debug.Log(TotalTime);
+        Debug.Log(RemainingTime);
+        while (RemainingTime > (double)0)
         {
+            Debug.Log(RemainingTime);
             t = (int)TotalTime - (int)RemainingTime;
             if (NumberOfZombies() <= 0) 
             {
                 MissionStats.text = 0.ToString();
                 HideZombieProgression();
+                ActiveZombie.IsAway = false;
                 break;
             }
             MissionStats.text=NumberOfZombies().ToString();
-            Debug.Log("kasKouil");
+            Debug.Log(t);
             DurationStats.text=((int)RemainingTime/3600)+"h"+((int)(RemainingTime%3600)/60+"m"+((int)(RemainingTime%60))+"s");
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
-            if (RemainingTime <= 1)
+            if (RemainingTime <= 0)
             {
-                HideZombieProgression();//FIN DE PARTIE
+                HideZombieProgression();
+                ActiveZombie.IsAway = false;//FIN DE PARTIE
             }
             yield return new WaitForSeconds(1);
         }
+        HideZombieProgression();
+        ActiveZombie.IsAway = false;
     }
 }

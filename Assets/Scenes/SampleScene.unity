@@ -12754,7 +12754,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
@@ -12837,20 +12836,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e65b1353fbe1ab439771bc6500414ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MissionStats: {fileID: 0}
-  DurationStats: {fileID: 0}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12920,7 +12905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &965907258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22262,6 +22247,7 @@ GameObject:
   - component: {fileID: 1964198695}
   - component: {fileID: 1964198694}
   - component: {fileID: 1964198696}
+  - component: {fileID: 1964198697}
   m_Layer: 5
   m_Name: PanelPlay
   m_TagString: Untagged
@@ -22339,6 +22325,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417daf15b08906c4c9ff513b980a7859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1964198697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964198692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e65b1353fbe1ab439771bc6500414ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MissionStats: {fileID: 497456456}
+  DurationStats: {fileID: 216949632}
 --- !u!1 &2022263979
 GameObject:
   m_ObjectHideFlags: 0

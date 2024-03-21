@@ -35,7 +35,6 @@ public class Zombie_Send : MonoBehaviour
     {
         if (MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].IsAway == false)
         {
-            Debug.Log("gesd");
             MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].ExpectedReturn = DateTime.Now.AddHours(Mission.hours).ToBinary();
             MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].DepartureTime = DateTime.Now.ToBinary();
             MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie].IsAway = true;
