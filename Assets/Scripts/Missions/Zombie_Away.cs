@@ -67,8 +67,11 @@ public class Zombie_Away : MonoBehaviour
             Debug.Log("kasKouil");
             DurationStats.text=((int)RemainingTime/3600)+"h"+((int)(RemainingTime%3600)/60+"m"+((int)(RemainingTime%60))+"s");
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
+            if (RemainingTime <= 0)
+            {
+                HideZombieProgression();//FIN DE PARTIE
+            }
             yield return new WaitForSeconds(1);
         }
-        HideZombieProgression();//FIN DE PARTIE
     }
 }
