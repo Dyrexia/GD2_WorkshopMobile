@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
@@ -14,6 +15,7 @@ public class Zombie_Return : MonoBehaviour
     public Transform SpawnItemRecompense;
     public Button ButtonPrefab;
     public SpriteLibrary SpriteLibrary;
+    public TextMeshProUGUI Stat;
     private void OnEnable()
     {
         Zombie = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie];
@@ -26,12 +28,15 @@ public class Zombie_Return : MonoBehaviour
     }
     public void GenerateItems(double MissionDuration)
     {
+        Stat.text = MissionEndStats((int)MissionDuration).ToString();
+
         int items = (int)MissionDuration/3600 + 1;
         Debug.Log(items);
         for (int i = 0; i < items; i++)
         {
             int levelModifier = (Zombie.GetIntelligence() / 6) + UnityEngine.Random.Range(-1, 1)+(int)MathF.Round(Zombie.MissionDifficulty)/2;
             MissionGains.Add(new ItemData(bodyparts[UnityEngine.Random.Range(0,bodyparts.Length)],Mathf.Min(levelModifier,15)));
+
         }
         foreach (ItemData item in MissionGains)
         {
@@ -40,9 +45,8 @@ public class Zombie_Return : MonoBehaviour
             //MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Add(itemWrapper);
             Button newButton = Instantiate(ButtonPrefab, SpawnItemRecompense);
             Debug.Log(GetComponent<SpriteLibrary>().GetSprite(item.Bodypart, item.SkinLabel));
-            newButton.GetComponent<UI_ImageRecompense>().Initialize(SpriteLibrary.GetSprite(item.Bodypart, item.SkinLabel));
+            newButton.GetComponent<UI_ImageRecompense>().Initialize(SpriteLibrary.GetSprite(item.Bodypart, item.SkinLabel),item.Level) ;
             newButton.gameObject.SetActive(true);
-            
         }
         MissionGains.Clear();
     }

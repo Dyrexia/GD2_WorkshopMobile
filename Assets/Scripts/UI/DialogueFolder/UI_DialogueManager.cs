@@ -19,7 +19,7 @@ public class UI_DialogueManager : MonoBehaviour
    
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         sentences = new Queue<string>();
         ImageLie = new Queue<Sprite>();
