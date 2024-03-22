@@ -50,9 +50,12 @@ public class Zombie_Away : MonoBehaviour
         if (MainManager.Instance.PlayerData.zombieList.Count != 0 && ActiveZombie.IsAway)
         {
             StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
+            GetComponent<UI_HideShow>().ShowCanvas();
         }
-        
-        
+        else
+            GetComponent<UI_HideShow>().HideCanvas();
+
+
     }
     private void HideZombieProgression()
     {
@@ -65,11 +68,8 @@ public class Zombie_Away : MonoBehaviour
         SetActiveZombie(zombieID);
         double TotalTime = (ActiveZombie.GetExpectedReturn()-ActiveZombie.GetDepartureTime()).TotalSeconds;
         double RemainingTime = (ActiveZombie.GetExpectedReturn()-DateTime.Now).TotalSeconds;
-        Debug.Log(TotalTime);
-        Debug.Log(RemainingTime);
         while (RemainingTime > (double)0)
         {
-            Debug.Log(RemainingTime);
             t = (int)TotalTime - (int)RemainingTime;
             if (NumberOfZombies() <= 0) 
             {
@@ -79,7 +79,6 @@ public class Zombie_Away : MonoBehaviour
                 break;
             }
             MissionStats.text=NumberOfZombies().ToString();
-            Debug.Log(t);
             DurationStats.text=((int)RemainingTime/3600)+"h"+((int)(RemainingTime%3600)/60+"m"+((int)(RemainingTime%60))+"s");
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
             if (RemainingTime <= 0)
