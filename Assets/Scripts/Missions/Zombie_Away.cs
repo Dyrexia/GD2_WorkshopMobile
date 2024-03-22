@@ -47,16 +47,19 @@ public class Zombie_Away : MonoBehaviour
     }
     public void ShowZombieProgression()
     {
-        if (MainManager.Instance.PlayerData.zombieList.Count != 0 && ActiveZombie.IsAway)
+
+        if (MainManager.Instance.PlayerData.zombieList.Count != 0)
+            SetActiveZombie(MainManager.Instance.CurrentZombie);
+        else
+            return;
+        Debug.Log("je passe le return");
+        if (ActiveZombie.IsAway || ActiveZombie.IsReturning)
         {
-            Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-            StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
+            StartCoroutine(UpdateZombieProgression());
             GetComponent<UI_HideShow>().ShowCanvas();
         }
         else
             GetComponent<UI_HideShow>().HideCanvas();
-
-
     }
     private void HideZombieProgression()
     {
@@ -64,9 +67,8 @@ public class Zombie_Away : MonoBehaviour
         GetComponent<UI_HideShow>().HideCanvas();
 
     }
-    public IEnumerator UpdateZombieProgression(int zombieID)
+    public IEnumerator UpdateZombieProgression()
     {
-        SetActiveZombie(zombieID);
         double TotalTime = (ActiveZombie.GetExpectedReturn()-ActiveZombie.GetDepartureTime()).TotalSeconds;
         double RemainingTime = (ActiveZombie.GetExpectedReturn()-DateTime.Now).TotalSeconds;
         while (RemainingTime > (double)0)
@@ -87,6 +89,7 @@ public class Zombie_Away : MonoBehaviour
                 HideZombieProgression();
                 EndMissionCanvas.ShowCanvas();
                 MainMenu.HideCanvas();
+                ActiveZombie.IsReturning = true;
                 ActiveZombie.IsAway = false;//FIN DE PARTIE
             }
             yield return new WaitForSeconds(1);
@@ -94,6 +97,7 @@ public class Zombie_Away : MonoBehaviour
         HideZombieProgression();
         EndMissionCanvas.ShowCanvas();
         MainMenu.HideCanvas();
+        ActiveZombie.IsReturning = true;
         ActiveZombie.IsAway=false;
     }
 }

@@ -12,12 +12,14 @@ public class ZombieData//classe pour les données des zombies
     public long DepartureTime;
     public float MissionDifficulty;
     public SerializableDictionary<string, ItemData> EquippedParts = new SerializableDictionary<string, ItemData>();
+    public bool IsReturning;
 
     public string Name;
     public ZombieData(string name = "John") //on initialise le zombie avec le stuff de base
     {
         Name = name;
         IsAway = false;
+        IsReturning = false;
         EquippedParts.Add("Tête",new ItemData("Tête"));
         EquippedParts.Add("Bras gauche", new ItemData("Bras gauche")); 
         EquippedParts.Add("Bras droit", new ItemData("Bras droit"));

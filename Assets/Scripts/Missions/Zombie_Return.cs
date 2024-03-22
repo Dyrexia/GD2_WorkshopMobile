@@ -7,7 +7,16 @@ public class Zombie_Return : MonoBehaviour
 {
     public List<ItemData> MissionGains = new List<ItemData>();
     private string[] bodyparts = { "Tête","Torse","Bras droit","Bras gauche","Jambe droite","Jambe gauche" };
-    private ZombieData Zombie = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie];
+    private ZombieData Zombie ;
+    private void OnEnable()
+    {
+        Zombie = MainManager.Instance.PlayerData.zombieList[MainManager.Instance.CurrentZombie];
+    }
+    public void AcceptEnd()
+    {
+        Debug.Log("IsReturning est false");
+        Zombie.IsReturning = false;
+    }
     public void GenerateItems(DateTime MissionDuration)
     {
         int items = MissionDuration.Hour + 1;
