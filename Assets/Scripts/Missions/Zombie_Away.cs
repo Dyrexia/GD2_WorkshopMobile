@@ -47,7 +47,7 @@ public class Zombie_Away : MonoBehaviour
     }
     public void ShowZombieProgression()
     {
-        if (MainManager.Instance.PlayerData.zombieList.Count != 0 && !ActiveZombie.IsAway)
+        if (MainManager.Instance.PlayerData.zombieList.Count != 0)
         {
             StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
         }
@@ -84,16 +84,22 @@ public class Zombie_Away : MonoBehaviour
             RemainingTime = (ActiveZombie.GetExpectedReturn() - DateTime.Now).TotalSeconds;
             if (RemainingTime <= 0)
             {
-                HideZombieProgression();
-                EndMissionCanvas.ShowCanvas();
-                MainMenu.HideCanvas();
+                if (ActiveZombie.IsAway)
+                {
+                    HideZombieProgression();
+                    EndMissionCanvas.ShowCanvas();
+                    MainMenu.HideCanvas();
+                }
                 ActiveZombie.IsAway = false;//FIN DE PARTIE
             }
             yield return new WaitForSeconds(1);
         }
-        HideZombieProgression();
-        EndMissionCanvas.ShowCanvas();
-        MainMenu.HideCanvas();
+        if (ActiveZombie.IsAway)
+        {
+            HideZombieProgression();
+            EndMissionCanvas.ShowCanvas();
+            MainMenu.HideCanvas();
+        }
         ActiveZombie.IsAway=false;
     }
 }
