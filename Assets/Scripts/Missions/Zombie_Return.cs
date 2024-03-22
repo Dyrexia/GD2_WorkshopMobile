@@ -33,7 +33,7 @@ public class Zombie_Return : MonoBehaviour
         Debug.Log(items);
         for (int i = 0; i < items; i++)
         {
-            int levelModifier = (Zombie.GetIntelligence() / 6) + UnityEngine.Random.Range(-1, 1)+(int)MathF.Round(Zombie.MissionDifficulty)/2;
+            int levelModifier = Mathf.Max((Zombie.GetIntelligence() / 6) + UnityEngine.Random.Range(-1, 2)+(int)MathF.Round(Zombie.MissionDifficulty)/2,0);
             MissionGains.Add(new ItemData(bodyparts[UnityEngine.Random.Range(0,bodyparts.Length)],Mathf.Min(levelModifier,15)));
 
         }
@@ -41,7 +41,7 @@ public class Zombie_Return : MonoBehaviour
         {
             ItemWrapper itemWrapper = new ItemWrapper();
             itemWrapper.ItemData = item;
-            //MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Add(itemWrapper);
+            MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Add(itemWrapper);
             Button newButton = Instantiate(ButtonPrefab, SpawnItemRecompense);
             Debug.Log(GetComponent<SpriteLibrary>().GetSprite(item.Bodypart, item.SkinLabel));
             newButton.GetComponent<UI_ImageRecompense>().Initialize(SpriteLibrary.GetSprite(item.Bodypart, item.SkinLabel),item.Level) ;

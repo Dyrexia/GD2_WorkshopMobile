@@ -6,12 +6,12 @@ public class UI_TriggerDialogue : MonoBehaviour
 {
     public UI_TutorialDialogue dialogue;
 
-    private void OnEnable()
-    {
+    //private void OnEnable()
+    //{
        
-        TriggerDialogue();
-        Debug.Log("J'envoie trigger dialogue");
-    }
+    //    TriggerDialogue();
+    //    Debug.Log("J'envoie trigger dialogue");
+    //}
 
     public void TriggerDialogue()
     {

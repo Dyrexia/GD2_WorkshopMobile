@@ -11,8 +11,7 @@ public class UI_TutorialDialogue
     [TextArea(3, 10)]
     public string[] sentences =
     {
-     "Le texte marche",
-     "ENfin putain je deviens fou",
+     ////"ENfin putain je deviens fou",
 
 
     };
