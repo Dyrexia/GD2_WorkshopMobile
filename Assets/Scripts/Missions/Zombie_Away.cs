@@ -12,6 +12,7 @@ public class Zombie_Away : MonoBehaviour
     private ZombieData ActiveZombie;
     public TextMeshProUGUI MissionStats;
     public TextMeshProUGUI DurationStats;
+    public UI_HideShow EndMissionCanvas;
     private int t;
     private void OnEnable()
     {
@@ -56,6 +57,7 @@ public class Zombie_Away : MonoBehaviour
     {
         StopCoroutine("UpdateZombieProgression");
         GetComponent<UI_HideShow>().HideCanvas();
+
     }
     public IEnumerator UpdateZombieProgression(int zombieID)
     {
@@ -82,11 +84,11 @@ public class Zombie_Away : MonoBehaviour
             if (RemainingTime <= 0)
             {
                 HideZombieProgression();
-                ActiveZombie.IsAway = false;//FIN DE PARTIE
+                EndMissionCanvas.ShowCanvas();//FIN DE PARTIE
             }
             yield return new WaitForSeconds(1);
         }
         HideZombieProgression();
-        ActiveZombie.IsAway = false;
+        EndMissionCanvas.ShowCanvas();
     }
 }
