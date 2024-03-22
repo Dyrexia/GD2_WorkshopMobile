@@ -15,8 +15,10 @@ public class UI_DialogueManager : MonoBehaviour
     private float letterSpeed = 0.02f;
    [SerializeField] private string currentPhrase;
    [SerializeField] private bool PhraseComplete;
+    public UI_HideShow DialogueCanva;
+    public UI_HideShow MainMenu;
+    public Image margaret;
     
-   
 
     // Start is called before the first frame update
     void Awake()
@@ -53,7 +55,7 @@ public class UI_DialogueManager : MonoBehaviour
         {
            
             DisplayNextPhrase ();
-
+            
         }
 
         else
@@ -68,6 +70,8 @@ public class UI_DialogueManager : MonoBehaviour
     }
   public void DisplayNextPhrase ()
     {
+        nameText.text = "Margaret";
+        margaret.gameObject.SetActive(true);
         PhraseComplete = false;
        
         if (sentences.Count == 0) 
@@ -76,8 +80,15 @@ public class UI_DialogueManager : MonoBehaviour
             return;
         
         }
+
+     
       
         string Phrase = sentences.Dequeue();
+        if (Phrase == "*Quelques semaines plus tard*")
+        {
+            nameText.text = "";
+          margaret.gameObject.SetActive(false);
+        }
         DialogueText.text = Phrase;
         currentPhrase = Phrase;
         Sprite Image = ImageLie.Dequeue();
@@ -103,6 +114,7 @@ public class UI_DialogueManager : MonoBehaviour
     }
     public void EndDialogue ()
     {
-        Debug.Log("End Of Conversation ");
+      DialogueCanva.HideCanvas();
+      MainMenu.ShowCanvas();
     }
 }
