@@ -1,16 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
+using UnityEngine.UI;
 
 public class Zombie_Return : MonoBehaviour
 {
     public List<ItemData> MissionGains = new List<ItemData>();
     private string[] bodyparts = { "Tête","Torse","Bras droit","Bras gauche","Jambe droite","Jambe gauche" };
     private ZombieData Zombie ;
-    public RectTransform SpawnItemRecompense;
-    public RectTransform ButtonPrefab;
+    public Transform SpawnItemRecompense;
+    public Button ButtonPrefab;
     public SpriteLibrary SpriteLibrary;
     private void OnEnable()
     {
@@ -36,7 +38,7 @@ public class Zombie_Return : MonoBehaviour
             ItemWrapper itemWrapper = new ItemWrapper();
             itemWrapper.ItemData = item;
             //MainManager.Instance.PlayerData.ItemLists[item.Bodypart].Items.Add(itemWrapper);
-            RectTransform newButton = Instantiate(ButtonPrefab, SpawnItemRecompense);
+            Button newButton = Instantiate(ButtonPrefab, SpawnItemRecompense);
             Debug.Log(GetComponent<SpriteLibrary>().GetSprite(item.Bodypart, item.SkinLabel));
             newButton.GetComponent<UI_ImageRecompense>().Initialize(SpriteLibrary.GetSprite(item.Bodypart, item.SkinLabel));
             newButton.gameObject.SetActive(true);

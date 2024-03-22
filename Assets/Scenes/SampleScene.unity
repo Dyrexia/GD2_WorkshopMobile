@@ -595,7 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MissionGains: []
   SpawnItemRecompense: {fileID: 1313389042}
-  ButtonPrefab: {fileID: 3389900803285396802, guid: 068fae45b195de242ba43de803389b98, type: 3}
+  ButtonPrefab: {fileID: 8429582567663187893, guid: 3491069d7bb21d54a94587e786bc35d7, type: 3}
   SpriteLibrary: {fileID: 29322203}
 --- !u!114 &29322203
 MonoBehaviour:
