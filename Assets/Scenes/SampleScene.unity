@@ -7417,7 +7417,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.5
+  m_fontSize: 48.15
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17868,7 +17868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Zombies restants : '
+  m_text: 'Nombre de Zombies : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3f47c46216e3e742949740aef8eba11, type: 2}
   m_sharedMaterial: {fileID: 8022959618950436844, guid: e3f47c46216e3e742949740aef8eba11, type: 2}
