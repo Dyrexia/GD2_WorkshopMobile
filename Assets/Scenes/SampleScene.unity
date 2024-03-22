@@ -4600,8 +4600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20856011, y: 0.46176955}
   m_AnchorMax: {x: 0.32657978, y: 0.86256415}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 238.37006, y: 0}
+  m_SizeDelta: {x: 476.74, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319469511
 MonoBehaviour:
@@ -7417,7 +7417,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.15
+  m_fontSize: 53.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14170,8 +14170,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Chiffre
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3f47c46216e3e742949740aef8eba11, type: 2}
+  m_sharedMaterial: {fileID: 8022959618950436844, guid: e3f47c46216e3e742949740aef8eba11, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14195,10 +14195,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -20546,8 +20546,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Nombre Personne infecte:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e3f47c46216e3e742949740aef8eba11, type: 2}
+  m_sharedMaterial: {fileID: 8022959618950436844, guid: e3f47c46216e3e742949740aef8eba11, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20571,10 +20571,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 52.4
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -21457,8 +21457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20856011, y: 0.46176955}
   m_AnchorMax: {x: 0.32028008, y: 0.8541153}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 246.35, y: 0}
+  m_SizeDelta: {x: 492.69, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763574611
 MonoBehaviour:
@@ -22442,7 +22442,7 @@ GameObject:
   - component: {fileID: 1964198696}
   - component: {fileID: 1964198697}
   m_Layer: 5
-  m_Name: PanelPlay
+  m_Name: PanelPlayStat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22532,6 +22532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MissionStats: {fileID: 497456456}
   DurationStats: {fileID: 216949632}
+  EndMissionCanvas: {fileID: 29322201}
 --- !u!1 &2022263979
 GameObject:
   m_ObjectHideFlags: 0
