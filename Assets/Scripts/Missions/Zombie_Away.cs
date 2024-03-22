@@ -47,7 +47,7 @@ public class Zombie_Away : MonoBehaviour
     }
     public void ShowZombieProgression()
     {
-        if (MainManager.Instance.PlayerData.zombieList.Count != 0)
+        if (MainManager.Instance.PlayerData.zombieList.Count != 0 && ActiveZombie.IsAway==true)
         {
             StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
         }
