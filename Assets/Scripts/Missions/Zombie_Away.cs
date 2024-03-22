@@ -49,6 +49,7 @@ public class Zombie_Away : MonoBehaviour
     {
         if (MainManager.Instance.PlayerData.zombieList.Count != 0 && ActiveZombie.IsAway)
         {
+            Debug.LogWarning("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             StartCoroutine(UpdateZombieProgression(MainManager.Instance.CurrentZombie));
             GetComponent<UI_HideShow>().ShowCanvas();
         }
