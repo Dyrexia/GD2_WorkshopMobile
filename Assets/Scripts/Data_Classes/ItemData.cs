@@ -51,14 +51,16 @@ public class ItemData//classe pour tout les données des items
     }
     private string GetSkin(int level)
     {
-        string[] SkinList = {"Basique","Feminin","Gangster","Rastafara","PopStar" };
+        string[] SkinList = {"Basique","Feminin","Gangster","Rastafara","PopStar","Lino" };
         if(level == 0) 
             return "Basique";
         if (level < 5)
-            return SkinList[UnityEngine.Random.Range(0, 2)];
+            return SkinList[UnityEngine.Random.Range(0, 3)];
         if (level < 10)
-            return SkinList[UnityEngine.Random.Range(1, 3)];
-        return SkinList[UnityEngine.Random.Range(2, 4)];
+            return SkinList[UnityEngine.Random.Range(1, 4)];
+        if (level < 15)
+            return SkinList[UnityEngine.Random.Range(2, 5)];
+        return SkinList[5];
     }
     private void GenerateRandomModifier()//On génère 3 nombres aléatoires avec cette équation x²+y²+z²= 1. selon le nb de chiffres négatifs on applique des buffs aux positifs
     {

@@ -29,7 +29,7 @@ public class Zombie_Return : MonoBehaviour
     {
         Stat.text = MissionEndStats((int)MissionDuration).ToString();
 
-        int items = (int)MissionDuration/3600 + 1;
+        int items = ((int)MissionDuration/60)*2 + 1;
         Debug.Log(items);
         for (int i = 0; i < items; i++)
         {
